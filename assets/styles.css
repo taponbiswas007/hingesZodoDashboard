@@ -1,0 +1,55 @@
+.invoice_wrapper{
+     font-family: "Public Sans", sans-serif;
+}
+.allInvoiceBtn{
+    transition: all 0.3s ease;
+}
+
+.invoice_items_filter_area button{
+    background: none;
+    border: none;
+}
+.invoice_items_filter_area .allInvoiceBtn:hover{
+       color: #4790bd !important;
+}
+.invoice_type_list{
+    width: 300px;
+}
+.invoice_type_list_items_area{
+    height: 350px;
+    overflow-y: auto;
+}
+.invoice_type_list {
+    top: 41px;
+    left: 0;
+    display: none;
+}
+.invoice_type_list ul li{
+        list-style-type: none;
+}
+.invoice_type_list ul li button{
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 7px 5px;
+    border-radius: 5px;
+}
+.invoice_type_list ul li button:hover{
+    background: #4790bd;
+    color: #ffffff;
+}
+.invoice_type_list ul li button:hover .icon{
+    color: #ffffff;
+}
+.invoice_type_list ul li button .icon{
+        color: rgba(151, 149, 149, 0.493);
+}
+.newCustomViewlink_area{
+    border-top: 1px solid #d3d3d3d3;
+}
+.newCustomViewlink_area button .icon{
+    color: #0313f1;
+}
+.newCustomViewlink_area button:hover{
+    color: #4790bd;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="invoice_wrapper">
+        <div class="invoice_header p-3 d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <div class="invoice_items_filter_area position-relative">
+                <button class="fs-6 text-dark fw-bold allInvoiceBtn">All Invoices<i class="fa-solid fa-angle-down ms-3"></i></button>
+                <div class="invoice_type_list rounded-3 p-2 bg-white shadow position-absolute z-1">
+                    <div class="position-relative mb-3" >
+                        <input class="form-control rounded-4 " style="padding-left: 35px;" type="search">
+                        <span class="position-absolute top-50 translate-middle-y" style="left: 10px;"><i
+                                class="fa-solid fa-magnifying-glass"></i></span>
+                    </div>
+                   <div class="invoice_type_list_items_area">
+                     <ul class=" p-3 ">
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">All</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">Draft</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">Locked</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">Pending Approval</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">Approved</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">Customer Viewed</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">Partially Paid</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">Unpaid</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">Overdue</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">Payment Initiated</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">Paid</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">Void</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                <span class="content">White Off</span>
+                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                            </button>
+                        </li>
+                    </ul>
+                   </div>
+                   <div class="newCustomViewlink_area px-3 py-2 mt-2">
+                     <button class="d-flex justify-content-start align-items-center gap-3 w-100">
+                                <span class="icon"><i class="fa-solid fa-circle-plus"></i></span>
+                        <span class="content">New Custom View</span>
+                            </button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- font awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- main js -->
+    <script src="assets/main.js"></script>
+</body>
+
+</html>
