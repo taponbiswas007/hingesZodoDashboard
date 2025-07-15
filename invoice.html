@@ -24,102 +24,130 @@
 <body>
     <div class="invoice_wrapper">
         <div class="invoice_header p-3 d-flex justify-content-between align-items-center gap-3 flex-wrap">
+            <!-- invoice filter area -->
             <div class="invoice_items_filter_area position-relative">
-                <button class="fs-6 text-dark fw-bold allInvoiceBtn">All Invoices<i class="fa-solid fa-angle-down ms-3"></i></button>
+                <button class="fs-6 text-dark fw-bold allInvoiceBtn">All Invoices<i
+                        class="fa-solid fa-angle-down ms-3"></i></button>
                 <div class="invoice_type_list rounded-3 p-2 bg-white shadow position-absolute z-1">
-                    <div class="position-relative mb-3" >
+                    <div class="position-relative mb-3">
                         <input class="form-control rounded-4 " style="padding-left: 35px;" type="search">
                         <span class="position-absolute top-50 translate-middle-y" style="left: 10px;"><i
                                 class="fa-solid fa-magnifying-glass"></i></span>
                     </div>
-                   <div class="invoice_type_list_items_area">
-                     <ul class=" p-3 ">
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">All</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
+                    <div class="invoice_type_list_items_area">
+                        <ul class=" p-3 ">
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">All</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">Draft</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">Locked</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">Pending Approval</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">Approved</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">Customer Viewed</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">Partially Paid</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">Unpaid</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">Overdue</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">Payment Initiated</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">Paid</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">Void</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                    <span class="content">White Off</span>
+                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="newCustomViewlink_area px-3 py-2 mt-2">
+                        <button class="d-flex justify-content-start align-items-center gap-3 w-100">
+                            <span class="icon"><i class="fa-solid fa-circle-plus"></i></span>
+                            <span class="content">New Custom View</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--add new and tools area start -->
+            <div class="add_new_and_tools_area">
+                <div class="d-flex justify-content-end align-items-center gap-3">
+                    <div class="d-flex justify-content-end align-items-center gap-2 addNewBtnarea">
+                        <button class="addNewBtn"><i class="fa-solid fa-plus pe-3"></i>New</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                             </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">Draft</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">Locked</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">Pending Approval</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">Approved</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">Customer Viewed</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">Partially Paid</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">Unpaid</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">Overdue</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">Payment Initiated</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">Paid</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">Void</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="d-flex justify-content-between align-items-center gap-3 w-100">
-                                <span class="content">White Off</span>
-                                <span class="icon"><i class="fa-regular fa-star"></i></span>
-                            </button>
-                        </li>
-                    </ul>
-                   </div>
-                   <div class="newCustomViewlink_area px-3 py-2 mt-2">
-                     <button class="d-flex justify-content-start align-items-center gap-3 w-100">
-                                <span class="icon"><i class="fa-solid fa-circle-plus"></i></span>
-                        <span class="content">New Custom View</span>
-                            </button>
-                   </div>
+                            <ul class="dropdown-menu border-0 shadow rounded-4 bg-white">
+                                <li><a class="dropdown-item" href="#">New Invoice</a></li>
+                                <li><a class="dropdown-item" href="#">New Credit Note</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn-group dropup">
+                        <button class="tools_btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                            aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></button>
+                        <ul class="dropdown-menu border-0 shadow rounded-4 bg-white">
+                            <li><a class="dropdown-item" href="#">New Invoice</a></li>
+                                <li><a class="dropdown-item" href="#">New Credit Note</a></li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>

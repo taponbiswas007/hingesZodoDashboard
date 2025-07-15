@@ -53,3 +53,33 @@
 .newCustomViewlink_area button:hover{
     color: #4790bd;
 }
+.add_new_and_tools_area .addNewBtnarea{
+    background: #4790bd;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+}
+.add_new_and_tools_area .addNewBtnarea button{
+    background: none;
+      padding: 7px 15px;
+    border-radius: 5px;
+     color: #ffffff;
+    border: none;
+}
+.add_new_and_tools_area .tools_btn{
+    background: #ebecec;
+    color: #000000;
+    padding: 7px 15px;
+     border: none;
+  
+}
+.add_new_and_tools_area .addNewBtnarea .addNewBtn{
+    border-right: 1px solid #ffffff !important;
+}
+.add_new_and_tools_area .dropdown-item:hover{
+       background: #4790bd;
+       color: #ffffff;
+}
+.tools_btn::after{
+    display: none !important;
+}
