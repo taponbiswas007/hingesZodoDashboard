@@ -463,3 +463,27 @@ show invoice area start */
     justify-content: center;
     padding-top: 100px;
 }
+.new_inv_header {
+    padding: 20px;
+    border-bottom: 1px solid gainsboro;
+}
+.new_inv_header h1{
+    font-size: 20px;
+    margin-bottom: 0;
+    color: #000000;
+    text-transform: capitalize;
+}
+.new_inv_header button{
+    background: none;
+    padding: 0 15px;
+}
+.new_inv_header button:first-child{
+    color: #4790bd;
+    border-right: 1px solid gainsboro;
+}
+.fs-14{
+    font-size: 14px !important;
+}
+.fs-12{
+    font-size: 12px !important;
+}
