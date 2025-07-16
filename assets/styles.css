@@ -1,85 +1,237 @@
-.invoice_wrapper{
-     font-family: "Public Sans", sans-serif;
+.invoice_wrapper {
+    font-family: "Public Sans", sans-serif;
+
 }
-.allInvoiceBtn{
+
+.invoice_wrapper button {
+    background: none;
+    border: none;
+
+}
+
+.invoice_wrapper ul {
+    list-style-type: none;
+
+}
+
+.allInvoiceBtn {
     transition: all 0.3s ease;
 }
 
-.invoice_items_filter_area button{
+.invoice_items_filter_area button {
     background: none;
     border: none;
 }
-.invoice_items_filter_area .allInvoiceBtn:hover{
-       color: #4790bd !important;
+
+.invoice_items_filter_area .allInvoiceBtn:hover {
+    color: #4790bd !important;
 }
-.invoice_type_list{
+
+.invoice_type_list {
     width: 300px;
 }
-.invoice_type_list_items_area{
+
+.invoice_type_list_items_area {
     height: 350px;
     overflow-y: auto;
 }
+
 .invoice_type_list {
     top: 41px;
     left: 0;
     display: none;
 }
-.invoice_type_list ul li{
-        list-style-type: none;
+
+.invoice_type_list ul li {
+    list-style-type: none;
 }
-.invoice_type_list ul li button{
+
+.invoice_type_list ul li button {
     font-size: 14px;
     font-weight: 500;
     transition: all 0.3s ease;
     padding: 7px 5px;
     border-radius: 5px;
 }
-.invoice_type_list ul li button:hover{
+
+.invoice_type_list ul li button:hover {
     background: #4790bd;
     color: #ffffff;
 }
-.invoice_type_list ul li button:hover .icon{
+
+.invoice_type_list ul li button:hover .icon {
     color: #ffffff;
 }
-.invoice_type_list ul li button .icon{
-        color: rgba(151, 149, 149, 0.493);
+
+.invoice_type_list ul li button .icon {
+    color: rgba(151, 149, 149, 0.493);
 }
-.newCustomViewlink_area{
+
+.newCustomViewlink_area {
     border-top: 1px solid #d3d3d3d3;
 }
-.newCustomViewlink_area button .icon{
+
+.newCustomViewlink_area button .icon {
     color: #0313f1;
 }
-.newCustomViewlink_area button:hover{
+
+.newCustomViewlink_area button:hover {
     color: #4790bd;
 }
-.add_new_and_tools_area .addNewBtnarea{
+
+.add_new_and_tools_area .addNewBtnarea {
     background: #4790bd;
     color: #ffffff;
     border-radius: 5px;
     border: none;
 }
-.add_new_and_tools_area .addNewBtnarea button{
+
+.add_new_and_tools_area .addNewBtnarea button {
     background: none;
-      padding: 7px 15px;
+    padding: 7px 15px;
     border-radius: 5px;
-     color: #ffffff;
+    color: #ffffff;
     border: none;
 }
-.add_new_and_tools_area .tools_btn{
+
+.add_new_and_tools_area .tools_btn {
     background: #ebecec;
     color: #000000;
     padding: 7px 15px;
-     border: none;
-  
+    border: none;
+
 }
-.add_new_and_tools_area .addNewBtnarea .addNewBtn{
+
+.add_new_and_tools_area .addNewBtnarea .addNewBtn {
     border-right: 1px solid #ffffff !important;
 }
-.add_new_and_tools_area .dropdown-item:hover{
-       background: #4790bd;
-       color: #ffffff;
+
+.add_new_and_tools_area .dropdown-item:hover {
+    background: #4790bd;
+    color: #ffffff;
 }
-.tools_btn::after{
+
+.tools_btn::after {
     display: none !important;
+}
+
+.customizeAndSettingsarea {
+    width: 250px;
+    padding: 15px 5px;
+}
+
+.customizeAndSettingsItem {
+    font-size: 16px;
+    width: 100%;
+    text-transform: capitalize;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+.customizeAndSettingsItem h1 {
+    color: #0000008c;
+    text-transform: capitalize !important;
+}
+
+.customizeAndSettingsItem .icon {
+    color: #4790bd;
+}
+
+.customizeAndSettingsItem .expandarrow {
+    color: #4790bd;
+}
+
+.customizeAndSettingsItem:hover h1,
+.customizeAndSettingsItem:hover .icon,
+.customizeAndSettingsItem:hover .expandarrow {
+    color: #ffffff !important;
+}
+
+.sortByList {
+    /* right: calc(100% + 15px); */
+    right: 100%;
+    top: 0;
+    display: none;
+    transition: all 1s ease;
+    width: 220px;
+}
+
+.sortByList .dropdown-item {
+    border-radius: 7px;
+    text-transform: capitalize;
+}
+
+.exportInvoicelist {
+    /* right: calc(100% + 15px); */
+    right: 100%;
+    top: 0;
+    display: none;
+    transition: all 1s ease;
+    width: 220px;
+}
+
+.exportInvoicelist .dropdown-item {
+    border-radius: 7px;
+    text-transform: capitalize;
+}
+
+.sortuparrow {
+    display: none;
+}
+
+.sortdownarrow {
+    display: none;
+}
+
+.sortByList .dropdown-item:hover .sortuparrow {
+    color: #ffffff;
+    display: block;
+}
+
+.sortByList .active {
+    background: #d1d1d1;
+    color: #000000;
+}
+
+.sortByList .active .sortdownarrow {
+    display: block;
+    color: #4790bd;
+}
+
+.sortByList .active:hover .sortuparrow {
+    display: none !important;
+}
+
+.sortByList .active:hover .sortdownarrow {
+    color: #ffffff !important;
+}
+
+.sortByListBtn:hover .sortByList {
+    display: block;
+}
+
+.exportInvoicebtn:hover .exportInvoicelist {
+    display: block;
+}
+
+@media (max-width: 576px) {
+    .sortByList {
+        right: 0;
+        top: 100%;
+        z-index: 1020;
+    }
+
+    .exportInvoicelist {
+        right: 0;
+        top: 100%;
+         z-index: 1020;
+    }
+}
+
+@media (max-height: 600px) {
+    .customizeAndSettingsarea {
+        height: 250px;
+        overflow-y: auto;
+    }
+
 }

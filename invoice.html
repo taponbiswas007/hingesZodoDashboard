@@ -142,12 +142,270 @@
                     <div class="btn-group dropup">
                         <button class="tools_btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
                             aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></button>
-                        <ul class="dropdown-menu border-0 shadow rounded-4 bg-white">
-                            <li><a class="dropdown-item" href="#">New Invoice</a></li>
-                                <li><a class="dropdown-item" href="#">New Credit Note</a></li>
+                        <ul class="dropdown-menu border-0 shadow rounded-3 bg-white customizeAndSettingsarea">
+                            <li class="position-relative sortByListBtn">
+                                <button class="dropdown-item customizeAndSettingsItem ">
+                                    <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                        <div class="d-flex justify-content-start align-items-center gap-3">
+                                            <span class="icon">
+                                                <i class="fa-solid fa-arrow-up"></i>
+                                                <i class="fa-solid fa-arrow-down"></i>
+                                            </span>
+                                            <h1 class="mb-0 fs-6">sort by</h1>
+                                        </div>
+                                        <span class="expandarrow">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </span>
+                                    </div>
+                                </button>
+                                <!-- sort by list start -->
+                                <ul class="sortByList position-absolute bg-white rounded-3 shadow py-3 px-1">
+                                    <li>
+                                        <button class="dropdown-item">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>
+                                                    date
+                                                </span>
+                                                <span class="sortuparrow">
+                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                </span>
+                                                <span class="sortdownarrow">
+                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                </span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item active">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>
+                                                    invoice#
+                                                </span>
+                                                <span class="sortuparrow">
+                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                </span>
+                                                <span class="sortdownarrow">
+                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                </span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>
+                                                    order number
+                                                </span>
+                                                <span class="sortuparrow">
+                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                </span>
+                                                <span class="sortdownarrow">
+                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                </span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>
+                                                    customer name
+                                                </span>
+                                                <span class="sortuparrow">
+                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                </span>
+                                                <span class="sortdownarrow">
+                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                </span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item">
+
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>
+                                                    due date
+                                                </span>
+                                                <span class="sortuparrow">
+                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                </span>
+                                                <span class="sortdownarrow">
+                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                </span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>
+                                                    invoice amount
+                                                </span>
+                                                <span class="sortuparrow">
+                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                </span>
+                                                <span class="sortdownarrow">
+                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                </span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>
+                                                    balance
+                                                </span>
+                                                <span class="sortuparrow">
+                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                </span>
+                                                <span class="sortdownarrow">
+                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                </span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>
+                                                    created time
+                                                </span>
+                                                <span class="sortuparrow">
+                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                </span>
+                                                <span class="sortdownarrow">
+                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                </span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>
+                                                    last modified time
+                                                </span>
+                                                <span class="sortuparrow">
+                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                </span>
+                                                <span class="sortdownarrow">
+                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                </span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <!-- sort by list end -->
+                            </li>
+                            <hr>
+                            <li>
+                                <button class="dropdown-item customizeAndSettingsItem">
+                                    <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                        <div class="d-flex justify-content-start align-items-center gap-3">
+                                            <span class="icon">
+                                                <i class="fa-solid fa-file-import"></i>
+                                            </span>
+                                            <h1 class="mb-0 fs-6">import invoice</h1>
+                                        </div>
+                                    </div>
+                                </button>
+
+                            </li>
+                            <li class="exportInvoicebtn position-relative">
+                                <button class="dropdown-item customizeAndSettingsItem">
+                                    <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                        <div class="d-flex justify-content-start align-items-center gap-3">
+                                            <span class="icon">
+                                                <i class="fa-solid fa-file-export"></i>
+                                            </span>
+                                            <h1 class="mb-0 fs-6">export</h1>
+                                        </div>
+                                        <span class="expandarrow">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </span>
+                                    </div>
+                                </button>
+                                <!-- export area list start -->
+                                <ul class="exportInvoicelist position-absolute bg-white rounded-3 shadow py-3 px-1">
+                                    <li>
+                                        <button class="dropdown-item">
+                                            export invoices
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item">
+                                            export current view
+                                        </button>
+                                    </li>
+
+                                </ul>
+                                <!-- export area list end -->
+                            </li>
+                            <hr>
+                            <li>
+                                <button class="dropdown-item customizeAndSettingsItem">
+                                    <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                        <div class="d-flex justify-content-start align-items-center gap-3">
+                                            <span class="icon">
+                                                <i class="fa-solid fa-gear"></i>
+                                            </span>
+                                            <h1 class="mb-0 fs-6">preferences</h1>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item customizeAndSettingsItem">
+                                    <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                        <div class="d-flex justify-content-start align-items-center gap-3">
+                                            <span class="icon">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </span>
+                                            <h1 class="mb-0 fs-6">Manage custom fields</h1>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item customizeAndSettingsItem">
+                                    <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                        <div class="d-flex justify-content-start align-items-center gap-3">
+                                            <span class="icon">
+                                                <i class="fa-solid fa-credit-card"></i>
+                                            </span>
+                                            <h1 class="mb-0 fs-6">Online payments</h1>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item customizeAndSettingsItem">
+                                    <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                        <div class="d-flex justify-content-start align-items-center gap-3">
+                                            <span class="icon">
+                                                <i class="fa-solid fa-arrows-rotate"></i>
+                                            </span>
+                                            <h1 class="mb-0 fs-6">refresh list</h1>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item customizeAndSettingsItem">
+                                    <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                        <div class="d-flex justify-content-start align-items-center gap-3">
+                                            <span class="icon">
+                                                <i class="fa-solid fa-rotate-right"></i>
+                                            </span>
+                                            <h1 class="mb-0 fs-6">reset column width</h1>
+                                        </div>
+                                    </div>
+                                </button>
+                            </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>

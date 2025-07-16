@@ -37,3 +37,10 @@ $(document).ready(function() {
         });
     });
 });
+$(document).ready(function() {
+    // Select the input field and attach a keyup event handler
+    $('.sortByList .dropdown-item').click( function() {
+       $('.sortByList .dropdown-item').removeClass('active');
+       $(this).addClass('active');
+    });
+});
