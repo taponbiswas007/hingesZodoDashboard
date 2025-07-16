@@ -4,7 +4,7 @@
 }
 
 .invoice_wrapper button {
-    background: none;
+
     border: none;
 
 }
@@ -29,6 +29,7 @@
 
 .invoice_type_list {
     width: 300px;
+        z-index: 1020;
 }
 
 .invoice_type_list_items_area {
@@ -224,7 +225,7 @@
     .exportInvoicelist {
         right: 0;
         top: 100%;
-         z-index: 1020;
+        z-index: 1020;
     }
 }
 
@@ -234,4 +235,86 @@
         overflow-y: auto;
     }
 
+}
+
+.invoice-table tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.invoice-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.invoice-table th {
+    color: rgba(131, 129, 149, 0.8);
+    /* background: #4790bd46 ; */
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.invoice-table td {
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.invoice-table th,
+.invoice-table td {
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    padding: 15px 15px;
+}
+
+.invoice-table thead {
+    position: sticky;
+    top: -2px;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.invoice-table thead tr th:first-child {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+}
+
+.fixed-column {
+    color: #4790bd !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.customize-popup-list-item {
+    background: #e0e0e0;
+    border-radius: 7px;
+    padding: 6px 10px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customize-popup-list-item:hover .pin-icon {
+    display: inline-block;
+}
+
+.pin-icon {
+    display: none;
+    color: #4790bd;
+}
+
+.locked-icon {
+    color: #999;
+}
+
+.invoice_table_area .table-responsive {
+    max-height: 650px;
+}
+
+.paginateBtn {
+    background: #4790bd !important;
+    color: #ffffff !important;
 }

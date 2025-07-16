@@ -409,6 +409,315 @@
                 </div>
             </div>
         </div>
+
+        <!-- ==========================invoice table area start======================== -->
+        <div class="invoice_table_area p-3">
+            <div class="table-responsive">
+                <table class="table invoice-table">
+                    <thead class="table-light">
+                        <tr class="text-nowrap">
+                            <th class="fixed-column">
+                                <i class="fas fa-sliders" role="button" data-bs-toggle="modal"
+                                    data-bs-target="#columnModal"></i>
+                            </th>
+                            <th>Date</th>
+                            <th>Invoice#</th>
+                            <th>Invoice Status</th>
+                            <th>Invoice Amount</th>
+                            <!-- Dynamic columns inserted here -->
+                            <th class="fixed-column">
+                                <i class="fas fa-search"></i>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Demo data rows -->
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-01</td>
+                            <td>#INV-001</td>
+                            <td><span class="text-primary">Paid</span></td>
+                            <td>$5,000</td>
+                            <!-- <td class="dynamic-col">ORD-1234</td>
+                            <td class="dynamic-col">Acme Ltd</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-05</td>
+                            <td>#INV-002</td>
+                            <td><span class="text-warning">Due</span></td>
+                            <td>$3,200</td>
+                            <!-- <td class="dynamic-col">ORD-5678</td>
+                            <td class="dynamic-col">TechSoft</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-column"></td>
+                            <td>2025-07-10</td>
+                            <td>#INV-003</td>
+                            <td><span class="text-danger">Overdue</span></td>
+                            <td>$1,800</td>
+                            <!-- <td class="dynamic-col">ORD-9999</td>
+                            <td class="dynamic-col">Xeno Corp</td> -->
+                            <td class="fixed-column"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination control -->
+            <div class="d-flex justify-content-end align-items-center mt-4 flex-wrap gap-4">
+                <!-- Items per page dropdown -->
+                <div class="dropdown">
+                    <button class="btn  paginateBtn dropdown-toggle d-flex align-items-center" type="button"
+                        id="pageSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-gear me-2"></i>
+                        <span id="currentPageSizeLabel">25 per page</span>
+                    </button>
+                    <ul class="dropdown-menu p-3 border-0 shadow rounded-3" aria-labelledby="pageSizeDropdown"
+                        style="width: 250px;">
+                        <input type="text" class="form-control mb-2" placeholder="Search..." id="pageSizeSearch">
+
+                        <li><a class="dropdown-item page-size-option" href="#" data-size="10">10 per page</a></li>
+                        <li><a class="dropdown-item page-size-option" href="#" data-size="25">25 per page</a></li>
+                        <li><a class="dropdown-item page-size-option" href="#" data-size="50">50 per page</a></li>
+                        <li><a class="dropdown-item page-size-option" href="#" data-size="100">100 per page</a></li>
+                    </ul>
+                </div>
+
+                <!-- Showing info -->
+                <div class="text-muted small" id="paginationInfo">
+                    Showing 1–25 of 83 items
+                </div>
+            </div>
+
+            <!-- Modal for customizing columns -->
+            <div class="modal fade" id="columnModal" tabindex="-1" aria-labelledby="columnModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                <i class="fas fa-sliders me-2"></i> Customize Columns
+                            </h5>
+                            <div class="ms-auto me-3 small text-muted">
+                                <span id="checkedCount">0</span> of <span id="totalCount">0</span> selected
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <input type="text" class="form-control mb-3" placeholder="Search columns..."
+                                id="searchColumns">
+
+                            <div id="columnListContainer">
+                                <!-- JS will populate list items here -->
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button id="saveColumnsBtn" type="button" class="btn btn-primary">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- ==========================invoice table area end======================== -->
     </div>
 
 
