@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="invoice_wrapper">
+        <div class="container-fluid px-3">
+            <div class="row g-0">
+                <div class="col-xl-4">
+                    <div class="invoice_wrapper shadow-sm " style="border:  1px solid gainsboro;">
+                        <div class="invoice_header p-3 d-flex justify-content-between align-items-center gap-3 flex-wrap  bg-white "
+                            style="border-bottom:  1px solid gainsboro;">
+                            <!-- invoice filter area -->
+                            <div class="invoice_items_filter_area position-relative">
+                                <button class="fs-6 text-dark fw-bold allInvoiceBtn">All Invoices<i
+                                        class="fa-solid fa-angle-down ms-3"></i></button>
+                                <div class="invoice_type_list rounded-3 p-2 bg-white shadow position-absolute z-1">
+                                    <div class="position-relative mb-3">
+                                        <input class="form-control rounded-4 " style="padding-left: 35px;"
+                                            type="search">
+                                        <span class="position-absolute top-50 translate-middle-y" style="left: 10px;"><i
+                                                class="fa-solid fa-magnifying-glass"></i></span>
+                                    </div>
+                                    <div class="invoice_type_list_items_area">
+                                        <ul class=" p-3 ">
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">All</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">Draft</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">Locked</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">Pending Approval</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">Approved</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">Customer Viewed</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">Partially Paid</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">Unpaid</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">Overdue</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">Payment Initiated</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">Paid</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">Void</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    class="d-flex justify-content-between align-items-center gap-3 w-100">
+                                                    <span class="content">White Off</span>
+                                                    <span class="icon"><i class="fa-regular fa-star"></i></span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="newCustomViewlink_area px-3 py-2 mt-2">
+                                        <button class="d-flex justify-content-start align-items-center gap-3 w-100">
+                                            <span class="icon"><i class="fa-solid fa-circle-plus"></i></span>
+                                            <span class="content">New Custom View</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--add new and tools area start -->
+                            <div class="add_new_and_tools_area">
+                                <div class="d-flex justify-content-end align-items-center gap-3">
+                                    <div class="d-flex justify-content-end align-items-center gap-2 addNewBtnarea">
+                                        <button class="addNewBtn"><i class="fa-solid fa-plus "></i></button>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                            </button>
+                                            <ul class="dropdown-menu border-0 shadow rounded-4 bg-white">
+                                                <li><a class="dropdown-item" href="#">New Invoice</a></li>
+                                                <li><a class="dropdown-item" href="#">New Credit Note</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group dropup">
+                                        <button class="tools_btn dropdown-toggle rounded-3 dropdown-toggle-split"
+                                            data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                class="fa-solid fa-ellipsis"></i></button>
+                                        <ul
+                                            class="dropdown-menu border-0 shadow rounded-3 bg-white customizeAndSettingsarea">
+                                            <li class="position-relative sortByListBtn">
+                                                <button class="dropdown-item customizeAndSettingsItem ">
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                        <div
+                                                            class="d-flex justify-content-start align-items-center gap-3">
+                                                            <span class="icon">
+                                                                <i class="fa-solid fa-arrow-up"></i>
+                                                                <i class="fa-solid fa-arrow-down"></i>
+                                                            </span>
+                                                            <h1 class="mb-0 fs-6">sort by</h1>
+                                                        </div>
+                                                        <span class="expandarrow">
+                                                            <i class="fa-solid fa-angle-right"></i>
+                                                        </span>
+                                                    </div>
+                                                </button>
+                                                <!-- sort by list start -->
+                                                <ul
+                                                    class="sortByList position-absolute bg-white rounded-3 shadow py-3 px-1">
+                                                    <li>
+                                                        <button class="dropdown-item">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <span>
+                                                                    date
+                                                                </span>
+                                                                <span class="sortuparrow">
+                                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                                </span>
+                                                                <span class="sortdownarrow">
+                                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                                </span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dropdown-item active">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <span>
+                                                                    invoice#
+                                                                </span>
+                                                                <span class="sortuparrow">
+                                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                                </span>
+                                                                <span class="sortdownarrow">
+                                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                                </span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dropdown-item">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <span>
+                                                                    order number
+                                                                </span>
+                                                                <span class="sortuparrow">
+                                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                                </span>
+                                                                <span class="sortdownarrow">
+                                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                                </span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dropdown-item">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <span>
+                                                                    customer name
+                                                                </span>
+                                                                <span class="sortuparrow">
+                                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                                </span>
+                                                                <span class="sortdownarrow">
+                                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                                </span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dropdown-item">
+
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <span>
+                                                                    due date
+                                                                </span>
+                                                                <span class="sortuparrow">
+                                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                                </span>
+                                                                <span class="sortdownarrow">
+                                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                                </span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dropdown-item">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <span>
+                                                                    invoice amount
+                                                                </span>
+                                                                <span class="sortuparrow">
+                                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                                </span>
+                                                                <span class="sortdownarrow">
+                                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                                </span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dropdown-item">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <span>
+                                                                    balance
+                                                                </span>
+                                                                <span class="sortuparrow">
+                                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                                </span>
+                                                                <span class="sortdownarrow">
+                                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                                </span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dropdown-item">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <span>
+                                                                    created time
+                                                                </span>
+                                                                <span class="sortuparrow">
+                                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                                </span>
+                                                                <span class="sortdownarrow">
+                                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                                </span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dropdown-item">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <span>
+                                                                    last modified time
+                                                                </span>
+                                                                <span class="sortuparrow">
+                                                                    <i class="fa-solid fa-arrow-up"></i>
+                                                                </span>
+                                                                <span class="sortdownarrow">
+                                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                                </span>
+                                                            </div>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                                <!-- sort by list end -->
+                                            </li>
+                                            <hr>
+                                            <li>
+                                                <button class="dropdown-item customizeAndSettingsItem">
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                        <div
+                                                            class="d-flex justify-content-start align-items-center gap-3">
+                                                            <span class="icon">
+                                                                <i class="fa-solid fa-file-import"></i>
+                                                            </span>
+                                                            <h1 class="mb-0 fs-6">import invoice</h1>
+                                                        </div>
+                                                    </div>
+                                                </button>
+
+                                            </li>
+                                            <li class="exportInvoicebtn position-relative">
+                                                <button class="dropdown-item customizeAndSettingsItem">
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                        <div
+                                                            class="d-flex justify-content-start align-items-center gap-3">
+                                                            <span class="icon">
+                                                                <i class="fa-solid fa-file-export"></i>
+                                                            </span>
+                                                            <h1 class="mb-0 fs-6">export</h1>
+                                                        </div>
+                                                        <span class="expandarrow">
+                                                            <i class="fa-solid fa-angle-right"></i>
+                                                        </span>
+                                                    </div>
+                                                </button>
+                                                <!-- export area list start -->
+                                                <ul
+                                                    class="exportInvoicelist position-absolute bg-white rounded-3 shadow py-3 px-1">
+                                                    <li>
+                                                        <button class="dropdown-item">
+                                                            export invoices
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="dropdown-item">
+                                                            export current view
+                                                        </button>
+                                                    </li>
+
+                                                </ul>
+                                                <!-- export area list end -->
+                                            </li>
+                                            <hr>
+                                            <li>
+                                                <button class="dropdown-item customizeAndSettingsItem">
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                        <div
+                                                            class="d-flex justify-content-start align-items-center gap-3">
+                                                            <span class="icon">
+                                                                <i class="fa-solid fa-gear"></i>
+                                                            </span>
+                                                            <h1 class="mb-0 fs-6">preferences</h1>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="dropdown-item customizeAndSettingsItem">
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                        <div
+                                                            class="d-flex justify-content-start align-items-center gap-3">
+                                                            <span class="icon">
+                                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                            </span>
+                                                            <h1 class="mb-0 fs-6">Manage custom fields</h1>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="dropdown-item customizeAndSettingsItem">
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                        <div
+                                                            class="d-flex justify-content-start align-items-center gap-3">
+                                                            <span class="icon">
+                                                                <i class="fa-solid fa-credit-card"></i>
+                                                            </span>
+                                                            <h1 class="mb-0 fs-6">Online payments</h1>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="dropdown-item customizeAndSettingsItem">
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                        <div
+                                                            class="d-flex justify-content-start align-items-center gap-3">
+                                                            <span class="icon">
+                                                                <i class="fa-solid fa-arrows-rotate"></i>
+                                                            </span>
+                                                            <h1 class="mb-0 fs-6">refresh list</h1>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="dropdown-item customizeAndSettingsItem">
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                        <div
+                                                            class="d-flex justify-content-start align-items-center gap-3">
+                                                            <span class="icon">
+                                                                <i class="fa-solid fa-rotate-right"></i>
+                                                            </span>
+                                                            <h1 class="mb-0 fs-6">reset column width</h1>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice_list_area">
+                            <ul class="invoice_items_list">
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                                <li class="invoice_items">
+                                    <a class="dropdown-item" href="#">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td>
+                                                    <h1>Customer A</h1>
+                                                    <div class="d-flex justify-content-start align-items-center gap-3">
+                                                        <p>INV-011</p>
+                                                        <span class=" bg-secondary d-block rounded-circle"
+                                                            style="height: 5px; width: 5px;;"></span>
+                                                        <p>26 Jun 2025</p>
+                                                    </div>
+                                                    <span>Draft</span>
+                                                </td>
+                                                <td>
+                                                    $2990.76
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="individaul_invoice_area">
+                        <div class="in_invoice_header">
+                            <div class="d-flex justify-content-between gap-3 flex-wrap align-items-center">
+                                <h1>
+                                    INV -003
+                                </h1>
+                                <div class="d-flex justify-content-end align-items-center gap-3">
+                                    <a href="#" class="upload_file"><i
+                                            class="fa-solid fa-paperclip me-2 text-primary"></i>upload file</a>
+                                    <a href="#" class="commentHistory"><i
+                                            class="fa-regular fa-comment me-2"></i>comments &
+                                        history</a>
+                                    <button class="closeinvoice"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice_navbar">
+                            <a href="#" class="nav_items_link">
+                                <i class="fa-regular fa-pen-to-square me-2"></i>
+                                edit
+                            </a>
+                            <a href="#" class="nav_items_link">
+                                <i class="fa-regular fa-envelope"></i>
+                                send
+                            </a>
+                            <a href="#" class="nav_items_link">
+                                <i class="fa-solid fa-share-from-square me-2"></i>
+                                share
+                            </a>
+                            <a href="#" class="nav_items_link">
+                                <i class="fa-regular fa-file-pdf me-2"></i>
+                                pdf print
+                            </a>
+                            <a href="#" class="nav_items_link">
+                                <i class="fa-solid fa-floppy-disk me-2"></i>
+                                record payment
+                            </a>
+                            <div class="btn-group dropup">
+                                <button class="tools_btn dropdown-toggle nav_items_link dropdown-toggle-split rounded-3"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><i
+                                        class="fa-solid fa-ellipsis"></i></button>
+                                <ul class="dropdown-menu border-0 shadow rounded-3 bg-white nav_items_linkmoreitems">
+                                    <li>
+                                        <button class="dropdown-item ">
+                                            <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                <div class="d-flex justify-content-start align-items-center gap-3">
+                                                    <span class="icon">
+                                                        <i class="fa-solid fa-envelope-circle-check"></i>
+                                                    </span>
+                                                    <h1 class="mb-0 fs-6">mark as sent</h1>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <hr>
+                                    <li>
+                                        <button class="dropdown-item ">
+                                            <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                <div class="d-flex justify-content-start align-items-center gap-3">
+                                                    <span class="icon">
+                                                        <i class="fa-solid fa-note-sticky"></i>
+                                                    </span>
+                                                    <h1 class="mb-0 fs-6">create credit note</h1>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item ">
+                                            <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                <div class="d-flex justify-content-start align-items-center gap-3">
+                                                    <span class="icon">
+                                                        <i class="fa-regular fa-clone"></i>
+                                                    </span>
+                                                    <h1 class="mb-0 fs-6">clone</h1>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item ">
+                                            <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                <div class="d-flex justify-content-start align-items-center gap-3">
+                                                    <span class="icon">
+                                                        <i class="fa-solid fa-ban"></i>
+                                                    </span>
+                                                    <h1 class="mb-0 fs-6">void</h1>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <hr>
+                                    <li>
+                                        <button class="dropdown-item ">
+                                            <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                <div class="d-flex justify-content-start align-items-center gap-3">
+                                                    <span class="icon">
+                                                        <i class="fa-solid fa-eye"></i>
+                                                    </span>
+                                                    <h1 class="mb-0 fs-6">view journal</h1>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item ">
+                                            <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                <div class="d-flex justify-content-start align-items-center gap-3">
+                                                    <span class="icon">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </span>
+                                                    <h1 class="mb-0 fs-6">delete</h1>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <hr>
+                                    <li>
+                                        <button class="dropdown-item ">
+                                            <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                <div class="d-flex justify-content-start align-items-center gap-3">
+                                                    <span class="icon">
+                                                        <i class="fa-solid fa-lock"></i>
+                                                    </span>
+                                                    <h1 class="mb-0 fs-6">lock invoice</h1>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <hr>
+                                    <li>
+                                        <button class="dropdown-item ">
+                                            <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                                                <div class="d-flex justify-content-start align-items-center gap-3">
+                                                    <span class="icon">
+                                                        <i class="fa-solid fa-file-invoice"></i>
+                                                    </span>
+                                                    <h1 class="mb-0 fs-6">invoice preferences</h1>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- =================invoice demo start================ -->
+                        <div class="invoice_view_area">
+                            <div class="invoice_images">
+                                <img src="assets/images/invoicedemo.png" alt="">
+                            </div>
+                        </div>
+                        <!-- =================invoice demo end================ -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- font awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- main js -->
+    <script src="assets/main.js"></script>
+</body>
+
+</html>

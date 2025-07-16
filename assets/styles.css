@@ -29,7 +29,7 @@
 
 .invoice_type_list {
     width: 300px;
-        z-index: 1020;
+    z-index: 1020;
 }
 
 .invoice_type_list_items_area {
@@ -317,4 +317,149 @@
 .paginateBtn {
     background: #4790bd !important;
     color: #ffffff !important;
+}
+
+/* 
+show invoice area start */
+.invoice_list_area ul {
+    padding-left: 0;
+}
+
+.invoice_items {
+    border-bottom: 1px solid gainsboro;
+}
+
+.invoice_items a table {
+    width: 100%;
+}
+
+.invoice_items a table tr td {
+    vertical-align: top;
+    padding: 7px;
+}
+
+.invoice_items a table tr td:nth-child(1) {
+    text-align: left;
+}
+
+.invoice_items a table tr td:nth-child(2) {
+    text-align: left;
+}
+
+.invoice_items a table tr td:nth-child(3) {
+    text-align: right;
+}
+
+.invoice_items a table tr td h1 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.invoice_items a table tr td p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #00000091;
+    margin-bottom: 3px;
+
+}
+
+.invoice_items a table tr td span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #746b6b;
+}
+
+.invoice_list_area {
+    height: calc(100vh - 71px);
+    overflow-y: auto;
+}
+
+.in_invoice_header {
+    padding: 22px;
+    background: #ffffff;
+}
+
+.in_invoice_header h1 {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.in_invoice_header a {
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+}
+
+.in_invoice_header button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.upload_file {
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    column-gap: 7px;
+    align-items: center;
+
+}
+
+.invoice_navbar {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background: #dce1e4;
+
+}
+
+.invoice_navbar .nav_items_link {
+    border-right: 1px solid #ffffff;
+    padding: 10px;
+    color: #000000;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    background: none;
+    border-radius: 0 !important;
+
+}
+
+.invoice_navbar .nav_items_link:hover {
+    background: #4790bd;
+    color: #ffffff;
+}
+
+.nav_items_linkmoreitems .dropdown-item {
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.nav_items_linkmoreitems .dropdown-item .icon {
+    color: #4790bd;
+}
+
+.nav_items_linkmoreitems .dropdown-item:hover {
+    background: #4790bd;
+    color: #ffffff;
+}
+
+.nav_items_linkmoreitems .dropdown-item:hover .icon {
+    color: #ffffff;
+}
+
+.invoice_view_area {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
 }
