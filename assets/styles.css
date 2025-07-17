@@ -647,3 +647,7 @@ color: red;
     .bill_summeryTable tr td{
         padding: 18px 0 !important;
     }
+    .text-left-force {
+    text-align: left !important;
+    direction: ltr !important;
+}

@@ -23,7 +23,7 @@
 
 <body class="bg-light">
     <div class="invoice_wrapper">
-        <div class="newInvoice_area ">
+        <div class="newInvoice_area position-relative">
             <div class="new_inv_header bg-white d-flex justify-content-between align-items-center gap-3">
                 <h1>
                     <i class="fa-solid fa-file-invoice me-3"></i>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-9">
-                        <div class="d-flex align-items-center flex-nowrap position-relative">
+                        <div class="d-flex align-items-center flex-nowrap position-relative" style="z-index: 10200;">
                             <input type="text" id="selectedCustomerInput"
                                 class="form-select customer-select-input w-100 rounded-end-0 rounded-start-3 fs-14"
                                 placeholder="Select Customer" readonly>
@@ -54,7 +54,7 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
 
-                            <div class="customer-dropdown-menu rounded-3 p-2 bg-white shadow position-absolute z-1 d-none"
+                            <div class="customer-dropdown-menu rounded-3 p-2 bg-white shadow position-absolute z-3 d-none"
                                 id="customerDropdown" style="top: 100%; left: 0; width: 100%;">
                                 <!-- Search input -->
                                 <div class="position-relative mb-3">
@@ -325,20 +325,18 @@
                             </thead>
                             <tbody>
                                 <tr class="text-nowrap">
-                                    <td>
+                                    <td class="text-start">
                                         <div class="position-relative product-input-wrapper" style="z-index: 1050;">
-                                            <!-- Product Input -->
-                                            <input type="text" class="form-control border-0 text-start product-input"
-                                                placeholder="Search Product" autocomplete="off" readonly>
+                                            <input type="text"
+                                                class="form-control border-0 text-start product-input w-100"
+                                                placeholder="Search Product" autocomplete="off" readonly
+                                                style="text-align: left; direction: ltr;">
 
-                                            <!-- Hidden to store product_id -->
                                             <input type="hidden" name="products[][id]" class="product-id-input">
 
                                             <!-- Dropdown -->
                                             <div class="product-dropdown position-absolute bg-white shadow rounded-3 p-2 d-none"
                                                 style="top: 100%; left: 0; width: 100%; z-index: 1055;">
-
-                                                <!-- Search inside dropdown -->
                                                 <div class="position-relative mb-3">
                                                     <input type="text" class="form-control product-search-box rounded-3"
                                                         placeholder="Search..." style="padding-left: 35px;">
@@ -348,7 +346,6 @@
                                                     </span>
                                                 </div>
 
-                                                <!-- Product List -->
                                                 <ul class="list-unstyled product-list mb-0">
                                                     <li>
                                                         <div class="dropdown-item text-start product-item" data-id="1">
@@ -369,8 +366,8 @@
                                                 </ul>
                                             </div>
                                         </div>
-
                                     </td>
+
                                     <td>
                                         <input type="text" class="form-control border-0 text-end" value="00.0">
                                     </td>
@@ -405,7 +402,8 @@
                             <tfoot style="border-color: #ffffff;">
                                 <tr>
                                     <td colspan="3">
-                                        <div class="d-flex w-100 h-100 justify-content-between align-items-start  flex-column" style="row-gap: 7rem;">
+                                        <div class="d-flex w-100 h-100 justify-content-between align-items-start  flex-column"
+                                            style="row-gap: 7rem;">
                                             <div class="d-flex w-100 justify-content-start align-items-center gap-3">
                                                 <button class="btn" style="background: rgb(209, 209, 209);">
                                                     <i class="fa-solid fa-circle-plus text-primary"></i>
@@ -420,7 +418,8 @@
                                                 <label for="Customer Note">
                                                     Customer Note
                                                 </label> <br>
-                                                <textarea class="form-control w-100 rounded-3" name="" rows="4" id=""></textarea>
+                                                <textarea class="form-control w-100 rounded-3" name="" rows="4"
+                                                    id=""></textarea>
                                             </div>
                                         </div>
                                     </td>
@@ -460,10 +459,12 @@
                                                         00
                                                     </td>
                                                 </tr>
-                                                
+
                                                 <tr>
-                                                    <td class="fs-5 fw-bolder" colspan="2" style="border-top: 1px solid gainsboro;">Total($)</td>
-                                                    <td class="fs-5 fw-bolder text-end" style="border-top: 1px solid gainsboro;">00</td>
+                                                    <td class="fs-5 fw-bolder" colspan="2"
+                                                        style="border-top: 1px solid gainsboro;">Total($)</td>
+                                                    <td class="fs-5 fw-bolder text-end"
+                                                        style="border-top: 1px solid gainsboro;">00</td>
                                                 </tr>
                                             </table>
                                         </div>
@@ -477,7 +478,7 @@
                 <!-- ==================Items add area end=================== -->
 
                 <!-- terms and condition area -->
-                 <div class="terms_and_condition_file_updload py-4 border-bottom">
+                <div class="terms_and_condition_file_updload py-4 border-bottom">
                     <div class="row g-4">
                         <div class="col-md-6">
                             <label for="" class="mb-1">Terms & Conditions</label>
@@ -491,19 +492,27 @@
                             </label>
                         </div>
                     </div>
-                 </div>
-                 <div class="terms_and_condition_file_updload py-4 border-bottom">
-                    <h1 class="fs-14 fw-medium">Want to get paid faster? <span class="text-primary fs-5" style="margin-top: -5px;"><i class="fa-brands fa-cc-mastercard me-2"></i><i class="fa-brands fa-cc-visa"></i></span></h1>
+                </div>
+                <div class="terms_and_condition_file_updload py-4 border-bottom">
+                    <h1 class="fs-14 fw-medium">Want to get paid faster? <span class="text-primary fs-5"
+                            style="margin-top: -5px;"><i class="fa-brands fa-cc-mastercard me-2"></i><i
+                                class="fa-brands fa-cc-visa"></i></span></h1>
                     <p class="fs-12 fw-normal">
-                        Configure payment gateways and receive payments online. Set up Payment Gateway <a href="#" class="fs-14 fw-bold text-primary text-decoration-none">Set up Payment Gateway</a>
+                        Configure payment gateways and receive payments online. Set up Payment Gateway <a href="#"
+                            class="fs-14 fw-bold text-primary text-decoration-none">Set up Payment Gateway</a>
                     </p>
-                 </div>
-                 <div class="note bg-white py-4 border-bottom">
-                    <h1 class="fs-14 fw-medium"><span class="fw-bold">Additional Fields:</span> Start adding custom fields for your invoices by going to Settings <i class="fa-solid fa-arrow-right"></i> Sales <i class="fa-solid fa-arrow-right"></i> Invoices.</h1>
-                   
-                 </div>
+                </div>
+                <div class="note bg-white py-4 border-bottom">
+                    <h1 class="fs-14 fw-medium"><span class="fw-bold">Additional Fields:</span> Start adding custom
+                        fields for your invoices by going to Settings <i class="fa-solid fa-arrow-right"></i> Sales <i
+                            class="fa-solid fa-arrow-right"></i> Invoices.</h1>
+
+                </div>
 
             </form>
+
+            <!-- total value showing area -->
+             <div></div>
         </div>
     </div>
 
