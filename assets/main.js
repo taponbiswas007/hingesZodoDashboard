@@ -136,6 +136,7 @@ $(document).ready(function () {
         }, 1000);
     });
 });
+
 function renderColumnList(filter = '') {
     const container = $('#columnListContainer');
     container.empty();
@@ -195,33 +196,106 @@ $('.page-size-option').click(function (e) {
     // Optional: Load new data here based on selected size
 });
 
- $(document).ready(function () {
-        // Toggle dropdown visibility
-        $('#selectedCustomerInput, .customer-dropdown-toggle').on('click', function (e) {
+$(document).ready(function () {
+    // Toggle dropdown visibility
+    $('#selectedCustomerInput, .customer-dropdown-toggle').on('click', function (e) {
+        e.stopPropagation();
+        $('#customerDropdown').toggleClass('d-none');
+        $('#customerSearchInput').focus();
+    });
+
+    // Hide dropdown on outside click
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('#customerDropdown').length && !$(e.target).is('#selectedCustomerInput')) {
+            $('#customerDropdown').addClass('d-none');
+        }
+    });
+
+    // Filter customer list
+    $('#customerSearchInput').on('input', function () {
+        const value = $(this).val().toLowerCase();
+        $('#customerList li').each(function () {
+            $(this).toggle($(this).text().toLowerCase().includes(value));
+        });
+    });
+
+    // Select customer
+    $('.customer-item').on('click', function () {
+        const name = $(this).text();
+        $('#selectedCustomerInput').val(name);
+        $('#customerDropdown').addClass('d-none');
+    });
+});
+
+$(document).ready(function () {
+    // Toggle dropdown
+    $('#termsSelectInput').on('click', function (e) {
+        e.stopPropagation();
+        $('#termsDropdown').toggleClass('d-none');
+        $('#termsSearchInput').focus();
+    });
+
+    // Hide on outside click
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('#termsDropdown').length) {
+            $('#termsDropdown').addClass('d-none');
+        }
+    });
+
+    // Search filter
+    $('#termsSearchInput').on('input', function () {
+        const value = $(this).val().toLowerCase();
+        $('#termsList li').each(function () {
+            $(this).toggle($(this).text().toLowerCase().includes(value));
+        });
+    });
+
+    // Select term
+    $('.term-item').on('click', function () {
+        $('.term-item').removeClass('selected');
+        $(this).addClass('selected');
+
+        const selectedText = $(this).text();
+        const selectedId = $(this).data('id');
+
+        $('#termsSelectInput').val(selectedText);
+        $('#selectedTermId').val(selectedId);
+        $('#termsDropdown').addClass('d-none');
+    });
+});
+$(document).ready(function () {
+        // Toggle dropdown
+        $('#salesPersonSelectInput').on('click', function (e) {
             e.stopPropagation();
-            $('#customerDropdown').toggleClass('d-none');
-            $('#customerSearchInput').focus();
+            $('#salesPersonDropdown').toggleClass('d-none');
+            $('#salesPersonSearchInput').focus();
         });
 
-        // Hide dropdown on outside click
+        // Hide on outside click
         $(document).on('click', function (e) {
-            if (!$(e.target).closest('#customerDropdown').length && !$(e.target).is('#selectedCustomerInput')) {
-                $('#customerDropdown').addClass('d-none');
+            if (!$(e.target).closest('#salesPersonDropdown').length) {
+                $('#salesPersonDropdown').addClass('d-none');
             }
         });
 
-        // Filter customer list
-        $('#customerSearchInput').on('input', function () {
+        // Search filter
+        $('#salesPersonSearchInput').on('input', function () {
             const value = $(this).val().toLowerCase();
-            $('#customerList li').each(function () {
+            $('#salesPersonList li').each(function () {
                 $(this).toggle($(this).text().toLowerCase().includes(value));
             });
         });
 
-        // Select customer
-        $('.customer-item').on('click', function () {
+        // Select salesperson
+        $('.salesperson-item').on('click', function () {
+            $('.salesperson-item').removeClass('selected');
+            $(this).addClass('selected');
+
             const name = $(this).text();
-            $('#selectedCustomerInput').val(name);
-            $('#customerDropdown').addClass('d-none');
+            const id = $(this).data('id');
+
+            $('#salesPersonSelectInput').val(name);
+            $('#selectedSalesPersonId').val(id);
+            $('#salesPersonDropdown').addClass('d-none');
         });
     });

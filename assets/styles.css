@@ -513,6 +513,12 @@ show invoice area start */
     background: transparent;
     text-align: left;
 }
+.invoiceSettingBtn{
+    background: none;
+    border: none;
+    color: #4790bd;
+    font-size: 20px;
+}
 
 .customer-item:hover {
     background-color: #4790bd;
@@ -524,3 +530,55 @@ show invoice area start */
     border-radius: 7px;
     color: #ffffff;
 }
+.terms-dropdown-menu {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .term-item {
+        position: relative;
+        border: none;
+        background: transparent;
+        font-size: 14px;
+        border-radius: 7px;
+    }
+
+    .term-item.selected::after {
+        content: "\f00c"; /* FontAwesome checkmark */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        right: 10px;
+        color: green;
+    }
+
+    .term-item:hover {
+        color: #ffffff;
+        background-color: #4790bd;
+    }
+    .salesperson-item {
+        position: relative;
+        border: none;
+        background: transparent;
+        font-size: 14px;
+        border-radius: 7px;
+    }
+
+    .salesperson-item.selected::after {
+        content: "\f00c"; /* FontAwesome checkmark */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        right: 10px;
+        color: green;
+    }
+
+    .salesperson-item:hover {
+        background-color: #4790bd;
+        color: #ffffff;
+    }
+
+    .salesperson-dropdown-menu {
+        max-height: 300px;
+        overflow-y: auto;
+    }
