@@ -582,3 +582,68 @@ show invoice area start */
         max-height: 300px;
         overflow-y: auto;
     }
+.additems_header{
+    background: #f9f9fb;
+    padding: 20px 10px;
+    border-radius: 7px;
+}
+.additems_header h1{
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+
+}
+.additems_header button{
+    background: none;
+    border: none;
+    color: #4790bd;
+}
+.product_table th{
+    text-transform: uppercase;
+    text-align: end;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 15px;
+}
+.product_table th:nth-child(1){
+    text-transform: uppercase;
+    text-align: start;
+}
+.product-item.selected::after {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        right: 10px;
+        color: green;
+    }
+
+    .product-item {
+        position: relative;
+        background: transparent;
+        padding: 7px;
+        cursor: pointer;
+        border-radius: 7px;
+    }
+        .product-item:hover{
+            background: #4790bd;
+        }
+
+    .product-list {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    .product-dropdown {
+        z-index: 1055;
+    }
+    .actionBtn span{
+ cursor: pointer;
+    }
+    .actionBtn span:nth-child(2){
+color: red;
+    }
+    .bill_summeryTable tr td{
+        padding: 18px 0 !important;
+    }

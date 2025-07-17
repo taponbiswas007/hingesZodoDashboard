@@ -299,3 +299,47 @@ $(document).ready(function () {
             $('#salesPersonDropdown').addClass('d-none');
         });
     });
+
+    $(document).ready(function () {
+        // Toggle dropdown on input click
+        $(document).on('click', '.product-input', function (e) {
+            e.stopPropagation();
+            $('.product-dropdown').addClass('d-none'); // close others
+
+            const wrapper = $(this).closest('.product-input-wrapper');
+            wrapper.find('.product-dropdown').removeClass('d-none');
+            wrapper.find('.product-search-box').val('').focus();
+
+            // Reset filter
+            wrapper.find('.product-list li').show();
+        });
+
+        // Close dropdown on outside click
+        $(document).on('click', function () {
+            $('.product-dropdown').addClass('d-none');
+        });
+
+        // Filter list
+        $(document).on('input', '.product-search-box', function () {
+            const value = $(this).val().toLowerCase();
+            const listItems = $(this).closest('.product-dropdown').find('.product-item');
+
+            listItems.each(function () {
+                const text = $(this).text().toLowerCase();
+                $(this).closest('li').toggle(text.includes(value));
+            });
+        });
+
+        // Select product
+        $(document).on('click', '.product-item', function () {
+            const productName = $(this).text();
+            const productId = $(this).data('id');
+
+            const wrapper = $(this).closest('.product-input-wrapper');
+            wrapper.find('.product-input').val(productName);
+            wrapper.find('.product-id-input').val(productId);
+
+            wrapper.find('.product-dropdown').addClass('d-none');
+        });
+    });
+
