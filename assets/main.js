@@ -194,3 +194,34 @@ $('.page-size-option').click(function (e) {
 
     // Optional: Load new data here based on selected size
 });
+
+ $(document).ready(function () {
+        // Toggle dropdown visibility
+        $('#selectedCustomerInput, .customer-dropdown-toggle').on('click', function (e) {
+            e.stopPropagation();
+            $('#customerDropdown').toggleClass('d-none');
+            $('#customerSearchInput').focus();
+        });
+
+        // Hide dropdown on outside click
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('#customerDropdown').length && !$(e.target).is('#selectedCustomerInput')) {
+                $('#customerDropdown').addClass('d-none');
+            }
+        });
+
+        // Filter customer list
+        $('#customerSearchInput').on('input', function () {
+            const value = $(this).val().toLowerCase();
+            $('#customerList li').each(function () {
+                $(this).toggle($(this).text().toLowerCase().includes(value));
+            });
+        });
+
+        // Select customer
+        $('.customer-item').on('click', function () {
+            const name = $(this).text();
+            $('#selectedCustomerInput').val(name);
+            $('#customerDropdown').addClass('d-none');
+        });
+    });
