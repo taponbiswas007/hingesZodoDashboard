@@ -197,21 +197,19 @@ $('.page-size-option').click(function (e) {
 });
 
 $(document).ready(function () {
-    // Toggle dropdown visibility
+    // CUSTOMER DROPDOWN
     $('#selectedCustomerInput, .customer-dropdown-toggle').on('click', function (e) {
         e.stopPropagation();
         $('#customerDropdown').toggleClass('d-none');
         $('#customerSearchInput').focus();
     });
 
-    // Hide dropdown on outside click
     $(document).on('click', function (e) {
         if (!$(e.target).closest('#customerDropdown').length && !$(e.target).is('#selectedCustomerInput')) {
             $('#customerDropdown').addClass('d-none');
         }
     });
 
-    // Filter customer list
     $('#customerSearchInput').on('input', function () {
         const value = $(this).val().toLowerCase();
         $('#customerList li').each(function () {
@@ -219,30 +217,27 @@ $(document).ready(function () {
         });
     });
 
-    // Select customer
     $('.customer-item').on('click', function () {
-        const name = $(this).text();
+        const name = $(this).text().trim();
         $('#selectedCustomerInput').val(name);
         $('#customerDropdown').addClass('d-none');
     });
 });
 
 $(document).ready(function () {
-    // Toggle dropdown
+    // TERMS DROPDOWN
     $('#termsSelectInput').on('click', function (e) {
         e.stopPropagation();
         $('#termsDropdown').toggleClass('d-none');
         $('#termsSearchInput').focus();
     });
 
-    // Hide on outside click
     $(document).on('click', function (e) {
         if (!$(e.target).closest('#termsDropdown').length) {
             $('#termsDropdown').addClass('d-none');
         }
     });
 
-    // Search filter
     $('#termsSearchInput').on('input', function () {
         const value = $(this).val().toLowerCase();
         $('#termsList li').each(function () {
@@ -250,12 +245,11 @@ $(document).ready(function () {
         });
     });
 
-    // Select term
     $('.term-item').on('click', function () {
         $('.term-item').removeClass('selected');
         $(this).addClass('selected');
 
-        const selectedText = $(this).text();
+        const selectedText = $(this).text().trim();
         const selectedId = $(this).data('id');
 
         $('#termsSelectInput').val(selectedText);
@@ -263,83 +257,90 @@ $(document).ready(function () {
         $('#termsDropdown').addClass('d-none');
     });
 });
+
 $(document).ready(function () {
-        // Toggle dropdown
-        $('#salesPersonSelectInput').on('click', function (e) {
-            e.stopPropagation();
-            $('#salesPersonDropdown').toggleClass('d-none');
-            $('#salesPersonSearchInput').focus();
-        });
+    // SALESPERSON DROPDOWN
+    $('#salesPersonSelectInput').on('click', function (e) {
+        e.stopPropagation();
+        $('#salesPersonDropdown').toggleClass('d-none');
+        $('#salesPersonSearchInput').focus();
+    });
 
-        // Hide on outside click
-        $(document).on('click', function (e) {
-            if (!$(e.target).closest('#salesPersonDropdown').length) {
-                $('#salesPersonDropdown').addClass('d-none');
-            }
-        });
-
-        // Search filter
-        $('#salesPersonSearchInput').on('input', function () {
-            const value = $(this).val().toLowerCase();
-            $('#salesPersonList li').each(function () {
-                $(this).toggle($(this).text().toLowerCase().includes(value));
-            });
-        });
-
-        // Select salesperson
-        $('.salesperson-item').on('click', function () {
-            $('.salesperson-item').removeClass('selected');
-            $(this).addClass('selected');
-
-            const name = $(this).text();
-            const id = $(this).data('id');
-
-            $('#salesPersonSelectInput').val(name);
-            $('#selectedSalesPersonId').val(id);
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('#salesPersonDropdown').length) {
             $('#salesPersonDropdown').addClass('d-none');
+        }
+    });
+
+    $('#salesPersonSearchInput').on('input', function () {
+        const value = $(this).val().toLowerCase();
+        $('#salesPersonList li').each(function () {
+            $(this).toggle($(this).text().toLowerCase().includes(value));
         });
     });
 
-    $(document).ready(function () {
-        // Toggle dropdown on input click
-        $(document).on('click', '.product-input', function (e) {
-            e.stopPropagation();
-            $('.product-dropdown').addClass('d-none'); // close others
+    $('.salesperson-item').on('click', function () {
+        $('.salesperson-item').removeClass('selected');
+        $(this).addClass('selected');
 
-            const wrapper = $(this).closest('.product-input-wrapper');
-            wrapper.find('.product-dropdown').removeClass('d-none');
-            wrapper.find('.product-search-box').val('').focus();
+        const name = $(this).text().trim();
+        const id = $(this).data('id');
 
-            // Reset filter
-            wrapper.find('.product-list li').show();
-        });
+        $('#salesPersonSelectInput').val(name);
+        $('#selectedSalesPersonId').val(id);
+        $('#salesPersonDropdown').addClass('d-none');
+    });
+});
 
-        // Close dropdown on outside click
-        $(document).on('click', function () {
-            $('.product-dropdown').addClass('d-none');
-        });
+$(document).ready(function () {
+    // PRODUCT DROPDOWN
+    $(document).on('click', '.product-input', function (e) {
+        e.stopPropagation();
+        $('.product-dropdown').addClass('d-none');
 
-        // Filter list
-        $(document).on('input', '.product-search-box', function () {
-            const value = $(this).val().toLowerCase();
-            const listItems = $(this).closest('.product-dropdown').find('.product-item');
+        const wrapper = $(this).closest('.product-input-wrapper');
+        wrapper.find('.product-dropdown').removeClass('d-none');
+        wrapper.find('.product-search-box').val('').focus();
 
-            listItems.each(function () {
-                const text = $(this).text().toLowerCase();
-                $(this).closest('li').toggle(text.includes(value));
-            });
-        });
+        wrapper.find('.product-list li').show();
+    });
 
-        // Select product
-        $(document).on('click', '.product-item', function () {
-            const productName = $(this).text();
-            const productId = $(this).data('id');
+    $(document).on('click', function () {
+        $('.product-dropdown').addClass('d-none');
+    });
 
-            const wrapper = $(this).closest('.product-input-wrapper');
-            wrapper.find('.product-input').val(productName);
-            wrapper.find('.product-id-input').val(productId);
+    $(document).on('input', '.product-search-box', function () {
+        const value = $(this).val().toLowerCase();
+        const listItems = $(this).closest('.product-dropdown').find('.product-item');
 
-            wrapper.find('.product-dropdown').addClass('d-none');
+        listItems.each(function () {
+            const text = $(this).text().toLowerCase();
+            $(this).closest('li').toggle(text.includes(value));
         });
     });
 
+    $(document).on('click', '.product-item', function () {
+        const productName = $(this).text().trim();
+        const productId = $(this).data('id');
+
+        const wrapper = $(this).closest('.product-input-wrapper');
+        wrapper.find('.product-input').val(productName);
+        wrapper.find('.product-id-input').val(productId);
+
+        wrapper.find('.product-dropdown').addClass('d-none');
+    });
+});
+$(document).ready(function () {
+    $('.stockDetailsBtn').click(function () {
+        $('.stockDetails_popup').show();
+    });
+    $('.stockDetails_popupClose').click(function () {
+        $('.stockDetails_popup').hide();
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});

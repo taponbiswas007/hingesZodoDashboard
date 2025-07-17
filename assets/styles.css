@@ -1,7 +1,29 @@
-.invoice_wrapper {
-    font-family: "Public Sans", sans-serif;
+.sidebar{
+    width: 250px;
+    height: calc(100vh - 90px);
+}
+.main_header_area{
+    height: 90px;
+}
+.main_content_area{
+    width: calc(100% - 250px);
 
 }
+.invoice_wrapper {
+    font-family: "Public Sans", sans-serif;
+    overflow-x: hidden;
+
+}
+.main_content_of_body{
+    height: calc(100vh - 160px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.footer_area{
+    height: 90px;
+    z-index: 9999999999999999999;
+}
+
 
 .invoice_wrapper button {
 
@@ -512,6 +534,8 @@ show invoice area start */
     border: none;
     background: transparent;
     text-align: left;
+    cursor: pointer;
+    border-radius: 7px;
 }
 .invoiceSettingBtn{
     background: none;
@@ -525,10 +549,10 @@ show invoice area start */
     color: #ffffff;
 }
 .new-customer-view button{
-    background: #4790bd;
+    color: #4790bd;
     padding: 7px;
     border-radius: 7px;
-    color: #ffffff;
+    background: transparent;
 }
 .terms-dropdown-menu {
         max-height: 300px;
@@ -625,9 +649,11 @@ show invoice area start */
         padding: 7px;
         cursor: pointer;
         border-radius: 7px;
+      
     }
         .product-item:hover{
             background: #4790bd;
+            color: #ffffff;
         }
 
     .product-list {
@@ -650,4 +676,15 @@ color: red;
     .text-left-force {
     text-align: left !important;
     direction: ltr !important;
+}
+.product_image_box{
+    height: 60px;
+    width: 50px;
+}
+.product_image_box img{
+    width: 100%;
+    height: 100%;
+}
+.stockDetails_popup{
+    display: none;
 }
