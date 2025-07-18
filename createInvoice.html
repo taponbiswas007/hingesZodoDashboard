@@ -48,13 +48,13 @@
                 <form action="" class=" fs-14 ">
                     <!-- customer information area start -->
                     <div class="row g-md-4 g-0 py-5 px-3 bg-light">
-                        <div class="col-xl-2 col-lg-2 col-md-3">
+                        <div class="col-xl-2 col-lg-3 col-md-3">
                             <div class="h-100 d-flex align-items-center">
-                                <label for="" class="text-danger">Customer Name*</label>
+                                <label for="" class="text-danger mb-md-0 mb-2">Customer Name*</label>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-9">
-                            <div class="d-flex align-items-center flex-nowrap position-relative" style="z-index: 1;">
+                        <div class="col-xl-6 col-lg-7 col-md-9">
+                            <div class="d-flex align-items-center flex-nowrap position-relative" style="z-index: 2;">
                                 <input type="text" id="selectedCustomerInput"
                                     class="form-select customer-select-input w-100 rounded-end-0 rounded-start-3 fs-14"
                                     placeholder="Select Customer" readonly>
@@ -146,12 +146,12 @@
                     <!-- invoice details area start -->
                     <div class="invoice_details_area bg-white py-4 px-3 border-bottom">
                         <div class="row g-md-4 g-0 py-4 px-2">
-                            <div class="col-xl-2 col-lg-2 col-md-3">
+                            <div class="col-xl-2 col-lg-3 col-md-3">
                                 <div class="h-100 d-flex align-items-center">
-                                    <label for="" class="text-danger">Invoice#*</label>
+                                    <label for="" class="text-danger mb-md-0 mb-2">Invoice#*</label>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-9">
+                            <div class="col-xl-4 col-lg-6 col-md-9">
                                 <div class="position-relative">
                                     <input type="text" class="form-control rounded-3 " style="padding-right: 40px; "
                                         placeholder="Enter Invoice Number">
@@ -164,30 +164,31 @@
                             </div>
                         </div>
                         <div class="row g-md-4 g-0 py-4 px-2">
-                            <div class="col-xl-2 col-lg-2 col-md-3">
+                            <div class="col-xl-2 col-lg-3 col-md-3">
                                 <div class="h-100 d-flex align-items-center">
-                                    <label for="">Order Number</label>
+                                    <label for="" class="mb-md-0 mb-2">Order Number</label>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-9">
+                            <div class="col-xl-4 col-lg-6 col-md-9">
                                 <input type="text" class="form-control rounded-3 " placeholder="Enter Order Number">
                             </div>
                         </div>
                         <div class="row g-md-4 g-3 py-4 px-2">
-                            <div class="col-xl-2 col-lg-2 col-md-3">
+                            <div class="col-xl-2 col-lg-3 col-md-3">
                                 <div class="h-100 d-flex align-items-center">
-                                    <label for="" class="text-danger">Invoice Date</label>
+                                    <label for="" class="text-danger mb-md-0 mb-2">Invoice Date</label>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-9">
+                            <div class="col-xxl-4 xl-4 col-lg-6 col-md-9">
                                 <input type="date" class="form-control rounded-3 " placeholder="Enter Date">
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6">
-                                <div class="d-flex justify-content-between align-items-center gap-3">
+                            <div class="col-xxl-3 xl-6 col-lg-6 col-md-6">
+                                <div
+                                    class="d-flex justify-content-between align-items-sm-center align-items-start flex-sm-row flex-column gap-3">
                                     <div class="h-100 flex-shrink-0 d-flex align-items-center">
                                         Terms
                                     </div>
-                                    <div class="position-relative w-100" style="z-index: 1050;">
+                                    <div class="position-relative w-100" style="z-index: 1;">
                                         <!-- Input trigger -->
                                         <input type="text" id="termsSelectInput" class="form-select w-100 rounded-3"
                                             placeholder="Select Terms" readonly>
@@ -406,8 +407,9 @@
                                 </div>
 
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-6">
-                                <div class="d-flex justify-content-between align-items-center gap-3">
+                            <div class="col-xxl-3 xl-6 col-lg-6 col-md-6">
+                                <div
+                                    class="d-flex justify-content-between align-items-sm-center align-items-start flex-sm-row flex-column gap-3">
                                     <div class="h-100 flex-shrink-0 d-flex align-items-center text-nowrap">
                                         Due Date
                                     </div>
@@ -421,12 +423,12 @@
                     <!-- ==========Salesperson area start========== -->
                     <div class="bg-white py-4 px-3 border-bottom">
                         <div class="row g-md-4 g-0 py-4 px-2">
-                            <div class="col-xl-2 col-lg-2 col-md-3">
+                            <div class="col-xl-2 col-lg-3 col-md-3">
                                 <div class="h-100 d-flex align-items-center">
-                                    <label for="">Sales Person</label>
+                                    <label for="" class="mb-md-0 mb-2">Sales Person</label>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-9">
+                            <div class="col-xl-4 col-lg-6 col-md-9">
                                 <div class="position-relative" style="z-index: 1;">
                                     <!-- Input trigger -->
                                     <input type="text" id="salesPersonSelectInput" class="form-select rounded-3"
@@ -579,15 +581,17 @@
                     <!-- =================subject area start=============== -->
                     <div class="bg-white py-4 px-3 border-bottom">
                         <div class="row g-md-4 g-0 py-4 px-2">
-                            <div class="col-xl-2 col-lg-2 col-md-3">
+                            <div class="col-xl-2 col-lg-3 col-md-3">
                                 <div class="h-100 d-flex align-items-start">
-                                    <label for="">Subject <button type="button" style="margin-top: -7px;" class="bg-transparent text-secondary" data-bs-toggle="tooltip"
-                                                    data-bs-placement="top"
-                                                    title="You can enter up to 250 characters. If you do not require this field, you can mark it as inactive under invoice preferences"><i class="fa-solid fa-circle-info"></i></button></label>
+                                    <label for="" class="mb-md-0 mb-2">Subject <button type="button"
+                                            style="margin-top: -7px;" class="bg-transparent text-secondary"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="You can enter up to 250 characters. If you do not require this field, you can mark it as inactive under invoice preferences"><i
+                                                class="fa-solid fa-circle-info"></i></button></label>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-9">
-                                <textarea name="" id="" class="form-control" rows="4"
+                            <div class="col-xl-4 col-lg-6 col-md-9">
+                                <textarea name="" id="" class="form-control" rows="2"
                                     placeholder="Let your customer know what this invoice is for"></textarea>
                             </div>
                         </div>
@@ -596,7 +600,34 @@
 
                     <!-- ==================Items add area start=================== -->
                     <div class="items_add_area bg-white py-4 px-3 border-bottom">
-                        <div class="additems_header d-flex justify-content-between align-items-center gap-3 ">
+                        <!-- price list -->
+                        <div class="priceList position-relative mb-3" style="width: 300px;">
+                            <input type="text" readonly id="priceListInput" class="form-select ps-5  pe-5"
+                                placeholder="Select Price List" style="cursor: pointer;">
+                            <span class="position-absolute top-50 translate-middle-y start-0 ps-2 text-secondary">
+                                <i class="fa-regular fa-clipboard"></i>
+                            </span>
+                            <span id="clearPriceList"
+                                class="position-absolute top-50 translate-middle-y pe-3 fs-5 text-danger d-none"
+                                style="cursor: pointer; right: 20px;">
+                                &times; <span class="text-secondary">|</span>
+                            </span>
+
+                            <div id="priceListDropdown" class="dropdown-menu show w-100 mt-1 d-none shadow border-0 p-3"
+                                style="max-height: 200px; overflow-y: auto;">
+                                <input type="text" id="priceListSearch" class="form-control form-control-sm mb-2"
+                                    placeholder="Search..." autocomplete="off">
+                                <ul id="priceListItems" class="list-unstyled mb-0 ">
+                                    <li class="dropdown-item price-item" data-id="1">Retail Price</li>
+                                    <li class="dropdown-item price-item" data-id="2">Wholesale Price</li>
+                                    <li class="dropdown-item price-item" data-id="3">Special Offer</li>
+                                    <li class="dropdown-item price-item" data-id="4">Seasonal Rate</li>
+                                </ul>
+                            </div>
+                            <input type="hidden" id="selectedPriceId" name="price_list_id">
+                        </div>
+
+                        <div class="additems_header d-flex justify-content-between flex-wrap align-items-center gap-3 ">
                             <h1>Item Table</h1>
                             <div class="d-flex justify-content-end align-items-center gap-3">
                                 <button type="button"><i class="fa-solid fa-barcode me-2"></i>Scan Items</button>
@@ -770,7 +801,8 @@
                                         </td>
                                         <td>
                                             <input type="text" class="form-control border-0 text-end" value="00.0">
-                                            <button type="button"
+                                            <button type="button" data-bs-toggle="offcanvas"
+                                                data-bs-target="#recentTransaction_area" area-controls="offcanvasRight"
                                                 class="mt-2 text-primary bg-transparent fs-12 float-end fw-normal">Recent
                                                 Transactions</button>
                                         </td>
@@ -965,14 +997,12 @@
                                             <div class="d-flex w-100 h-100 justify-content-between align-items-start  flex-column"
                                                 style="row-gap: 7rem;">
                                                 <div
-                                                    class="d-flex w-100 justify-content-start align-items-center gap-3">
-                                                    <button type="button" class="btn"
-                                                        style="background: rgb(209, 209, 209);">
+                                                    class="d-flex w-100 justify-content-start align-items-center flex-wrap gap-3">
+                                                    <button type="button" class="btn" style="background: #f1f1fa;">
                                                         <i class="fa-solid fa-circle-plus text-primary"></i>
                                                         Add New Row
                                                     </button>
-                                                    <button type="button" class="btn "
-                                                        style="background: rgb(209, 209, 209);">
+                                                    <button type="button" class="btn " style="background: #f1f1fa;">
                                                         <i class="fa-solid fa-circle-plus text-primary"></i>
                                                         Add Items In Bulk
                                                     </button>
@@ -1042,6 +1072,252 @@
                     </div>
                     <!-- ==================Items add area end=================== -->
 
+                    <!-- ===============recent transaction area start================= -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="recentTransaction_area"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel">Item Details</h5>
+                            <button type="button" class="btn-close text-reset text-danger" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="items_description_area py-5 px-3 " style="background: #f3f8fe;">
+                            <div class="d-flex justify-content-start align-items-center gap-4 flex-wrap">
+                                <div class="image_box" style="height: 70px; width: 60px;">
+                                    <img src="assets/images/productimage.jpeg" style="height: 100%; width: 100%;"
+                                        alt="">
+                                </div>
+                                <div>
+                                    <h2 class="fs-6 fw-medium text-secondary">Inventory Items</h2>
+                                    <h1 class="mb-0 fs-4 text-dark fw-bold">DINING TABLE</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex items_and_transaction_tabs_area justify-content-between align-items-center pt-3 border-bottom">
+                            <button type="button"
+                                class="text-center bg-transparent mx-2 text-uppercase text-dark fs-14 w-50 active"
+                                id="itemsDetails">item
+                                details</button>
+                            <button type="button"
+                                class="text-center bg-transparent mx-2 text-uppercase text-dark fs-14 w-50"
+                                id="transactionDetails">transaction</button>
+                        </div>
+
+                        <!-- items details area start -->
+                        <div class="items_details_area py-3 mt-3 ">
+                            <h1 class="fw-medium fs-14 px-3">Stock Details</h1>
+                            <!-- stock summary -->
+                            <div class="stockSummary mt-3 px-3">
+                                <h1 class="fw-medium fs-14 mb-0 ">Stock Summary</h1>
+                                <hr class="mt-1">
+                                <table class="w-100">
+                                    <tr>
+                                        <td class="fw-medium fs-12 py-2 w-50 text-secondary">
+                                            Stock on Hand
+                                        </td>
+                                        <td class="fw-medium fs-12 py-2 text-dark w-50">
+                                            -100.00
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium fs-12 py-2 w-50 text-secondary">
+                                            Committed Stock
+                                        </td>
+                                        <td class="fw-medium fs-12 py-2 text-dark w-50">
+                                            1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium fs-12 py-2 w-50 text-secondary">
+                                            Available for Sale
+                                        </td>
+                                        <td class="fw-medium fs-12 py-2 text-dark w-50">
+                                            -101.00
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="w-100 bg-light" style="height: 5px;"></div>
+
+                            <!-- Sales Information -->
+                            <div class=" mt-3 px-3">
+                                <h1 class="fw-medium fs-14 mb-0 ">Sales Information</h1>
+                                <table class="w-100">
+                                    <tr>
+                                        <td class="fw-medium fs-12 py-2 w-50 text-secondary">
+                                            Price
+                                        </td>
+                                        <td class="fw-medium fs-12 py-2 text-dark w-50">
+                                            $2,200.00
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium fs-12 py-2 w-50 text-secondary">
+                                            Account
+                                        </td>
+                                        <td class="fw-medium fs-12 py-2 text-dark w-50">
+                                            Sales
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="w-100 bg-light" style="height: 5px;"></div>
+
+                            <!-- Purchase Information -->
+                            <div class=" mt-3 px-3">
+                                <h1 class="fw-medium fs-14 mb-0 ">Purchase Information</h1>
+                                <table class="w-100">
+                                    <tr>
+                                        <td class="fw-medium fs-12 py-2 w-50 text-secondary">
+                                            Price
+                                        </td>
+                                        <td class="fw-medium fs-12 py-2 text-dark w-50">
+                                            $2,200.00
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-medium fs-12 py-2 w-50 text-secondary">
+                                            Account
+                                        </td>
+                                        <td class="fw-medium fs-12 py-2 text-dark w-50">
+                                            Cost of Goods Sold
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="w-100 bg-light" style="height: 5px;"></div>
+
+                            <div class="p-3">
+                                <button class="bg-transparent text-primary fw-medium fs-14 text-capitalize">
+                                    other details<i class="fa-solid fa-angle-down ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- items details area end -->
+
+                        <!-- transaction area start -->
+                        <div class="transaction_details_area p-3 mt-3">
+                            <div class="d-flex justify-content-between align-items-center border-bottom py-3 mb-3">
+                                <div class="dropdown">
+                                    <button class="bg-transparent fw-semibold  fs-6 text-dark dropdown-toggle"
+                                        type="button" id="invoicesTypefilter" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Invoices
+                                    </button>
+                                    <ul class="dropdown-menu shadow border-0 rounded-3"
+                                        aria-labelledby="InvoicesTypefilter">
+                                        <li><a class="dropdown-item" href="#">Quotes</a></li>
+                                        <li><a class="dropdown-item" href="#">Sales Order</a></li>
+                                        <li><a class="dropdown-item" href="#">Invoices</a></li>
+                                        <li><a class="dropdown-item" href="#">Credit Notes</a></li>
+                                        <li><a class="dropdown-item" href="#">Purchase Orders</a></li>
+                                        <li><a class="dropdown-item" href="#">Bills</a></li>
+                                        <li><a class="dropdown-item" href="#">Vendor Credits</a></li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-end align-items-center gap-3">
+                                    <span>Status:</span>
+                                    <div class="dropdown">
+                                        <button class="bg-transparent fw-semibold  fs-6 text-dark dropdown-toggle"
+                                            type="button" id="invoicesTypefilter" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            All
+                                        </button>
+                                        <ul class="dropdown-menu shadow border-0 rounded-3"
+                                            aria-labelledby="InvoicesTypefilter">
+                                            <li><a class="dropdown-item" href="#">All</a></li>
+                                            <li><a class="dropdown-item" href="#">Draft</a></li>
+                                            <li><a class="dropdown-item" href="#">Client Viewed</a></li>
+                                            <li><a class="dropdown-item" href="#">Partial Paid</a></li>
+                                            <li><a class="dropdown-item" href="#">Unpaid</a></li>
+                                            <li><a class="dropdown-item" href="#">Overdue</a></li>
+                                            <li><a class="dropdown-item" href="#">Paid</a></li>
+                                            <li><a class="dropdown-item" href="#">Void</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="border-bottom w-100 mb-3">
+                                <tr>
+                                    <td class="fs-14 fw-semibold text-dark py-2 w-50">
+                                        TEST A
+                                    </td>
+                                    <td class="fs-14 fw-semibold text-dark py-2 w-50 text-end">
+                                        <span class="text-secondary fs-12 me-2">Item Price</span> <span
+                                            style="border-bottom: 1px dashed #000000;">$2,200.00</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fs-14 fw-semibold text-secondary py-2 w-50">
+                                        INV-000009 | 29 Jun 2025
+                                    </td>
+                                    <td class="fs-14 fw-semibold text-dark py-2 w-50 text-end">
+                                        <span class="text-secondary fs-12">Quantity Sold </span> 1.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fs-14 fw-normal text-dark py-2 w-50">
+                                        Sent
+                                    </td>
+
+                                </tr>
+                            </table>
+                            <table class="border-bottom w-100 mb-3">
+                                <tr>
+                                    <td class="fs-14 fw-semibold text-dark py-2 w-50">
+                                        TEST A
+                                    </td>
+                                    <td class="fs-14 fw-semibold text-dark py-2 w-50 text-end">
+                                        <span class="text-secondary fs-12 me-2">Item Price</span> <span
+                                            style="border-bottom: 1px dashed #000000;">$2,200.00</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fs-14 fw-semibold text-secondary py-2 w-50">
+                                        INV-000009 | 29 Jun 2025
+                                    </td>
+                                    <td class="fs-14 fw-semibold text-dark py-2 w-50 text-end">
+                                        <span class="text-secondary fs-12">Quantity Sold </span> 1.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fs-14 fw-normal text-dark py-2 w-50">
+                                        Sent
+                                    </td>
+
+                                </tr>
+                            </table>
+                            <table class="border-bottom w-100 mb-3">
+                                <tr>
+                                    <td class="fs-14 fw-semibold text-dark py-2 w-50">
+                                        TEST A
+                                    </td>
+                                    <td class="fs-14 fw-semibold text-dark py-2 w-50 text-end">
+                                        <span class="text-secondary fs-12 me-2">Item Price</span> <span
+                                            style="border-bottom: 1px dashed #000000;">$2,200.00</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fs-14 fw-semibold text-secondary py-2 w-50">
+                                        INV-000009 | 29 Jun 2025
+                                    </td>
+                                    <td class="fs-14 fw-semibold text-dark py-2 w-50 text-end">
+                                        <span class="text-secondary fs-12">Quantity Sold </span> 1.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fs-14 fw-normal text-dark py-2 w-50">
+                                        Sent
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- transaction area end -->
+                    </div>
+                    <!-- ===============recent transaction area end================= -->
                     <!-- terms and condition area -->
                     <div class="terms_and_condition_file_updload py-4 px-3 border-bottom bg-light">
                         <div class="row g-4">
@@ -1051,20 +1327,42 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="" class="mb-1">File Upload</label>
-                                <input type="file" class="form-select" style="width: 200px;">
-                                <label for="">
+                                <label class="custom-file-upload">
+                                    <i class="fas fa-upload pe-3"></i>
+                                    <span>Upload File</span>
+                                    <input type="file">
+                                </label>
+                                <label for="" class="text-secondary fs-12">
                                     You can upload a maximum of 10 files, 10MB each
                                 </label>
                             </div>
                         </div>
                     </div>
                     <div class="terms_and_condition_file_updload py-4 px-3 border-bottom bg-light">
-                        <h1 class="fs-14 fw-medium">Want to get paid faster? <span class="text-primary fs-5"
-                                style="margin-top: -5px;"><i class="fa-brands fa-cc-mastercard me-2"></i><i
-                                    class="fa-brands fa-cc-visa"></i></span></h1>
+                        <h1 class="fs-14 fw-medium d-flex align-items-center gap-2">
+                            Want to get paid faster?
+                            <span class="d-flex align-items-center" style="margin-top: 3px; gap: 5px;">
+                                <!-- MasterCard SVG -->
+                                <svg width="30" height="20" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="18" cy="16" r="10" fill="#EB001B" />
+                                    <circle cx="30" cy="16" r="10" fill="#F79E1B" />
+                                    <path d="M24 16a10 10 0 0 0-6-9 10 10 0 0 0 0 18 10 10 0 0 0 6-9z" fill="#FF5F00" />
+                                </svg>
+
+                                <!-- Visa SVG -->
+                                <svg width="40" height="20" viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg">
+                                    <text x="0" y="22" font-family="Arial, sans-serif" font-size="25" font-weight="bold"
+                                        fill="#1A1F71">
+                                        VISA
+                                    </text>
+                                </svg>
+                            </span>
+                        </h1>
+
+
                         <p class="fs-12 fw-normal">
                             Configure payment gateways and receive payments online. Set up Payment Gateway <a href="#"
-                                class="fs-14 fw-bold text-primary text-decoration-none">Set up Payment
+                                class="fs-14 fw-medium text-primary text-decoration-none">Set up Payment
                                 Gateway</a>
                         </p>
                     </div>
@@ -1079,8 +1377,49 @@
 
                 </form>
                 <!-- total value showing area -->
-                <div class="bg-white py-4 footer_area sticky-bottom border-top">
+                <div class="bg-white py-4 footer_area sticky-bottom border-top px-3">
+                    <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                        <div class="d-flex justify-content-start align-items-center gap-3 flex-wrap">
+                            <button class="btn btn-secondary">
+                                Save as Draft
+                            </button>
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn btn-primary">Save and Send</button>
 
+                                <div class="btn-group" role="group">
+                                    <button id="saveAndSend" type="button" class="btn btn-primary dropdown-toggle"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    </button>
+                                    <ul class="dropdown-menu shadow border-0 rounded-3" aria-labelledby="saveAndSend">
+                                        <li><a class="dropdown-item" href="#"><i
+                                                    class="fa-solid fa-print me-2 text-primary"></i>Save and Print</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"><i
+                                                    class="fa-regular fa-share-from-square me-2 text-primary"></i>Save
+                                                and
+                                                Share</a></li>
+                                        <li><a class="dropdown-item" href="#"><i
+                                                    class="fa-regular fa-clock me-2 text-primary"></i>Save and Send
+                                                Later</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary">
+                                Cancel
+                            </button>
+                        </div>
+                        <!-- total amount -->
+                        <div>
+                            <ul class="list-unstyled">
+                                <li class="fs-14 fw-semibold text-dark mb-2">
+                                    Total Amount: $ 2,200.00
+                                </li>
+                                <li class="fs-12 fw-medium text-secondary">
+                                    Total Quantity: 0
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

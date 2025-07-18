@@ -17,6 +17,9 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 });
+
+
+
 $(document).ready(function () {
     // Select the input field and attach a keyup event handler
     $('.invoice_type_list input[type="search"]').on('keyup', function () {
@@ -37,6 +40,9 @@ $(document).ready(function () {
         });
     });
 });
+
+
+
 $(document).ready(function () {
     // Select the input field and attach a keyup event handler
     $('.sortByList .dropdown-item').click(function () {
@@ -105,6 +111,8 @@ function applyColumns() {
         });
     });
 }
+
+
 
 $(document).ready(function () {
     renderColumnList();
@@ -196,6 +204,8 @@ $('.page-size-option').click(function (e) {
     // Optional: Load new data here based on selected size
 });
 
+
+
 $(document).ready(function () {
     // CUSTOMER DROPDOWN
     $('#selectedCustomerInput, .customer-dropdown-toggle').on('click', function (e) {
@@ -217,13 +227,15 @@ $(document).ready(function () {
         });
     });
 
-   $('.customer-item').on('click', function () {
-    const name = $(this).find('.customerName').text().trim();
-    $('#selectedCustomerInput').val(name);
-    $('#customerDropdown').addClass('d-none');
-});
+    $('.customer-item').on('click', function () {
+        const name = $(this).find('.customerName').text().trim();
+        $('#selectedCustomerInput').val(name);
+        $('#customerDropdown').addClass('d-none');
+    });
 
 });
+
+
 
 $(document).ready(function () {
     // TERMS DROPDOWN
@@ -259,6 +271,7 @@ $(document).ready(function () {
     });
 });
 
+
 $(document).ready(function () {
     // SALESPERSON DROPDOWN
     $('#salesPersonSelectInput').on('click', function (e) {
@@ -292,6 +305,8 @@ $(document).ready(function () {
         $('#salesPersonDropdown').addClass('d-none');
     });
 });
+
+
 
 $(document).ready(function () {
     // PRODUCT DROPDOWN
@@ -331,6 +346,8 @@ $(document).ready(function () {
         wrapper.find('.product-dropdown').addClass('d-none');
     });
 });
+
+
 $(document).ready(function () {
     $('.stockDetailsBtn').click(function () {
         $('.stockDetails_popup').show();
@@ -339,12 +356,16 @@ $(document).ready(function () {
         $('.stockDetails_popup').hide();
     });
 });
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.forEach(function (tooltipTriggerEl) {
         new bootstrap.Tooltip(tooltipTriggerEl);
     });
 });
+
+
 $(document).ready(function () {
     $('.addNewSalesperson').click(function () {
         $('.new_salespersonAdd_area').show();
@@ -355,4 +376,76 @@ $(document).ready(function () {
         $('.searchandSalesperson_area').show();
     });
 
+});
+
+
+
+$(document).ready(function () {
+    // Toggle dropdown
+    $('#priceListInput').on('click', function (e) {
+        e.stopPropagation();
+        $('#priceListDropdown').toggleClass('d-none');
+        $('#priceListSearch').val('').focus();
+        $('#priceListItems li').show();
+    });
+
+    // Hide on outside click
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.priceList').length) {
+            $('#priceListDropdown').addClass('d-none');
+        }
+    });
+
+    // Search filter
+    $('#priceListSearch').on('input', function () {
+        const value = $(this).val().toLowerCase();
+        $('#priceListItems li').each(function () {
+            $(this).toggle($(this).text().toLowerCase().includes(value));
+        });
+    });
+
+    // Select item
+    $('.price-item').on('click', function () {
+        const name = $(this).text().trim();
+        const id = $(this).data('id');
+
+        $('#priceListInput').val(name);
+        $('#selectedPriceId').val(id);
+        $('#clearPriceList').removeClass('d-none');
+        $('#priceListDropdown').addClass('d-none');
+    });
+
+    // Clear selected item
+    $('#clearPriceList').on('click', function () {
+        $('#priceListInput').val('');
+        $('#selectedPriceId').val('');
+        $(this).addClass('d-none');
+    });
+
+    // 🔄 Show X if value already selected (on refresh/page load)
+    if ($('#priceListInput').val().trim() !== '') {
+        $('#clearPriceList').removeClass('d-none');
+    }
+});
+
+
+
+$(document).ready(function () {
+    $('.items_and_transaction_tabs_area button').click(function () {
+        $('.items_and_transaction_tabs_area button').removeClass('active');
+        $(this).addClass('active');
+    });
+
+});
+
+
+$(document).ready(function () {
+    $('#itemsDetails').click(function () {
+        $('.items_details_area').show();
+        $('.transaction_details_area').hide();
+    });
+    $('#transactionDetails').click(function () {
+        $('.items_details_area').hide();
+        $('.transaction_details_area').show();
+    });
 });
