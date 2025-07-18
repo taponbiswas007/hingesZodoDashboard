@@ -345,3 +345,14 @@ document.addEventListener('DOMContentLoaded', function () {
         new bootstrap.Tooltip(tooltipTriggerEl);
     });
 });
+$(document).ready(function () {
+    $('.addNewSalesperson').click(function () {
+        $('.new_salespersonAdd_area').show();
+        $('.searchandSalesperson_area').hide();
+    });
+    $('.cancelAddperson').click(function () {
+        $('.new_salespersonAdd_area').hide();
+        $('.searchandSalesperson_area').show();
+    });
+
+});

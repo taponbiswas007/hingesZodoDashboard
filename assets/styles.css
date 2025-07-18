@@ -725,6 +725,9 @@ color: red;
 .trems_data_row:hover .term_data_action{
     z-index: 2;
 }
+.new_salespersonAdd_area{
+    display: none;
+}
 @media (max-width: 576px) {
     .terms_details_table::after{
         display: none;
