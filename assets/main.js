@@ -449,3 +449,14 @@ $(document).ready(function () {
         $('.transaction_details_area').show();
     });
 });
+
+
+// Handle row click to go to invoice detail
+$('.invoice-table tbody').on('click', 'tr', function () {
+    const invoiceId = $(this).data('id');
+    if (invoiceId) {
+        // window.location.href = `showInvoice-${invoiceId}.html`;
+        window.location.href = `showInvoice.html`;
+
+    }
+});
