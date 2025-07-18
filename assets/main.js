@@ -217,11 +217,12 @@ $(document).ready(function () {
         });
     });
 
-    $('.customer-item').on('click', function () {
-        const name = $(this).text().trim();
-        $('#selectedCustomerInput').val(name);
-        $('#customerDropdown').addClass('d-none');
-    });
+   $('.customer-item').on('click', function () {
+    const name = $(this).find('.customerName').text().trim();
+    $('#selectedCustomerInput').val(name);
+    $('#customerDropdown').addClass('d-none');
+});
+
 });
 
 $(document).ready(function () {
@@ -320,7 +321,7 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.product-item', function () {
-        const productName = $(this).text().trim();
+        const productName = $(this).find('h1').text().trim();
         const productId = $(this).data('id');
 
         const wrapper = $(this).closest('.product-input-wrapper');

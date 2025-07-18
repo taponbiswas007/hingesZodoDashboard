@@ -34,794 +34,986 @@
         <div class="invoice_wrapper main_content_area bg-white">
             <div class="newInvoice_area position-relative">
                 <div class="new_inv_header bg-white d-flex justify-content-between align-items-center gap-3 sticky-top "
-                    style="z-index: 99999999999999;">
+                    style="z-index: 1;">
                     <h1>
                         <i class="fa-solid fa-file-invoice me-3"></i>
                         new invoice
                     </h1>
-                    <div class="d-flex justify-content-end align-items-center ">
-                        <button type="button"><i class="fa-solid fa-gear"></i></button>
-                        <button type="button"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
+                    <!-- <div class="d-flex justify-content-end align-items-center ">
+                        <button type="button"><i class="fa-solid fa-gear"></i></button> -->
+                    <button type="button"><i class="fa-solid fa-xmark"></i></button>
                 </div>
-                <div class="main_content_of_body">
-                    <form action="" class=" fs-14 ">
-                        <!-- customer information area start -->
-                        <div class="row g-md-4 g-0 py-5 px-3 bg-light">
-                            <div class="col-xl-2 col-lg-2 col-md-3">
-                                <div class="h-100 d-flex align-items-center">
-                                    <label for="" class="text-danger">Customer Name*</label>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-9">
-                                <div class="d-flex align-items-center flex-nowrap position-relative"
-                                    style="z-index: 10200;">
-                                    <input type="text" id="selectedCustomerInput"
-                                        class="form-select customer-select-input w-100 rounded-end-0 rounded-start-3 fs-14"
-                                        placeholder="Select Customer" readonly>
-
-                                    <button type="button"
-                                        class="customer-dropdown-toggle searchbtn flex-shrink-0 py-2 rounded-end-3 rounded-start-0"
-                                        type="button">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-
-                                    <div class="customer-dropdown-menu rounded-3 p-2 bg-white shadow position-absolute z-3 d-none"
-                                        id="customerDropdown" style="top: 100%; left: 0; width: 100%;">
-                                        <!-- Search input -->
-                                        <div class="position-relative mb-3">
-                                            <input class="form-control rounded-4 customer-search-input"
-                                                id="customerSearchInput" placeholder="Search Customer..."
-                                                style="padding-left: 35px;" type="search">
-                                            <span class="position-absolute top-50 translate-middle-y "
-                                                style="left: 10px;">
-                                                <i class="fa-solid fa-magnifying-glass"></i>
-                                            </span>
-                                        </div>
-
-                                        <!-- Customer list -->
-                                        <div class="customer-list-area">
-                                            <ul class="p-3 mb-0 list-unstyled" id="customerList">
-                                                <li>
-                                                    <div class="w-100 text-start customer-item">John Doe</d>
-                                                </li>
-                                                <li>
-                                                    <div class="w-100 text-start customer-item">Jane Smith</div>
-                                                </li>
-                                                <li>
-                                                    <div class="w-100 text-start customer-item">Michael Johnson</div>
-                                                </li>
-                                                <li>
-                                                    <div class="w-100 text-start customer-item">Emily Davis</div>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <!-- New customer view button -->
-                                        <div class="new-customer-view px-3 py-2 mt-2 border-top">
-                                            <button type="button"
-                                                class="d-flex justify-content-start align-items-center gap-3 w-100">
-                                                <span class="icon"><i class="fa-solid fa-circle-plus"></i></span>
-                                                <span class="content">New Customer</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
+            </div>
+            <div class="main_content_of_body">
+                <form action="" class=" fs-14 ">
+                    <!-- customer information area start -->
+                    <div class="row g-md-4 g-0 py-5 px-3 bg-light">
+                        <div class="col-xl-2 col-lg-2 col-md-3">
+                            <div class="h-100 d-flex align-items-center">
+                                <label for="" class="text-danger">Customer Name*</label>
                             </div>
                         </div>
-                        <!-- customer information area start -->
+                        <div class="col-xl-6 col-lg-6 col-md-9">
+                            <div class="d-flex align-items-center flex-nowrap position-relative"
+                                style="z-index: 1;">
+                                <input type="text" id="selectedCustomerInput"
+                                    class="form-select customer-select-input w-100 rounded-end-0 rounded-start-3 fs-14"
+                                    placeholder="Select Customer" readonly>
 
-                        <!-- invoice details area start -->
-                        <div class="invoice_details_area bg-white py-4 px-3 border-bottom">
-                            <div class="row g-md-4 g-0 py-4 px-2">
-                                <div class="col-xl-2 col-lg-2 col-md-3">
-                                    <div class="h-100 d-flex align-items-center">
-                                        <label for="" class="text-danger">Invoice#*</label>
+                                <button type="button"
+                                    class="customer-dropdown-toggle searchbtn flex-shrink-0 py-2 rounded-end-3 rounded-start-0"
+                                    type="button">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+
+                                <div class="customer-dropdown-menu rounded-3 p-2 bg-white shadow position-absolute z-3 d-none"
+                                    id="customerDropdown" style="top: 100%; left: 0; width: 100%;">
+                                    <!-- Search input -->
+                                    <div class="position-relative mb-3">
+                                        <input class="form-control rounded-4 customer-search-input"
+                                            id="customerSearchInput" placeholder="Search Customer..."
+                                            style="padding-left: 35px;" type="search">
+                                        <span class="position-absolute top-50 translate-middle-y " style="left: 10px;">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </span>
                                     </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-9">
-                                    <div class="position-relative">
-                                        <input type="text" class="form-control rounded-3 " style="padding-right: 40px; "
-                                            placeholder="Enter Invoice Number">
+
+                                    <!-- Customer list -->
+                                    <div class="customer-list-area">
+                                        <ul class="p-3 mb-0 list-unstyled" id="customerList">
+                                            <li class="border-bottom">
+                                                <div class="w-100 text-start customer-item">
+                                                    <div class="d-flex justify-content-start gap-3 align-items-center">
+                                                        <span class="customerName_word bg-light ">
+                                                            T
+                                                        </span>
+                                                        <div>
+                                                            <h1 class="mb-1 fs-14 fw-medium text-dark customerName">
+                                                                Tapon Sarker</h1>
+                                                            <p class="mb-0 fs-12 fw-medium text-secondary"><i
+                                                                    class="fa-regular fa-copy me-2"></i>Text company</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="border-bottom">
+                                                <div class="w-100 text-start customer-item">
+                                                    <div class="d-flex justify-content-start gap-3 align-items-center">
+                                                        <span class="customerName_word bg-light ">
+                                                            T
+                                                        </span>
+                                                        <div>
+                                                            <h1 class="mb-1 fs-14 fw-medium text-dark customerName">
+                                                                Tapon Sarker 1</h1>
+                                                            <p class="mb-0 fs-12 fw-medium text-secondary"><i
+                                                                    class="fa-regular fa-copy me-2"></i>Text company</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="border-bottom">
+                                                <div class="w-100 text-start customer-item">
+                                                    <div class="d-flex justify-content-start gap-3 align-items-center">
+                                                        <span class="customerName_word bg-light ">
+                                                            T
+                                                        </span>
+                                                        <div>
+                                                            <h1 class="mb-1 fs-14 fw-medium text-dark customerName">
+                                                                Tapon Sarker 2</h1>
+                                                            <p class="mb-0 fs-12 fw-medium text-secondary"><i
+                                                                    class="fa-regular fa-copy me-2"></i>Text company</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- New customer view button -->
+                                    <div class="new-customer-view px-3 py-2 mt-2 border-top">
                                         <button type="button"
-                                            class="invoiceSettingBtn position-absolute translate-middle-y top-50"
-                                            style="right: 10px;">
-                                            <i class="fa-solid fa-gear"></i>
+                                            class="d-flex justify-content-start align-items-center gap-3 w-100">
+                                            <span class="icon"><i class="fa-solid fa-circle-plus"></i></span>
+                                            <span class="content">New Customer</span>
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row g-md-4 g-0 py-4 px-2">
-                                <div class="col-xl-2 col-lg-2 col-md-3">
-                                    <div class="h-100 d-flex align-items-center">
-                                        <label for="">Order Number</label>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-9">
-                                    <input type="text" class="form-control rounded-3 " placeholder="Enter Order Number">
+
+                        </div>
+                    </div>
+                    <!-- customer information area start -->
+
+                    <!-- invoice details area start -->
+                    <div class="invoice_details_area bg-white py-4 px-3 border-bottom">
+                        <div class="row g-md-4 g-0 py-4 px-2">
+                            <div class="col-xl-2 col-lg-2 col-md-3">
+                                <div class="h-100 d-flex align-items-center">
+                                    <label for="" class="text-danger">Invoice#*</label>
                                 </div>
                             </div>
-                            <div class="row g-md-4 g-3 py-4 px-2">
-                                <div class="col-xl-2 col-lg-2 col-md-3">
-                                    <div class="h-100 d-flex align-items-center">
-                                        <label for="" class="text-danger">Invoice Date</label>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-9">
-                                    <input type="date" class="form-control rounded-3 " placeholder="Enter Date">
-                                </div>
-                                <div class="col-xl-3 col-lg-3 col-md-6">
-                                    <div class="d-flex justify-content-between align-items-center gap-3">
-                                        <div class="h-100 flex-shrink-0 d-flex align-items-center">
-                                            Terms
-                                        </div>
-                                        <div class="position-relative w-100" style="z-index: 1050;">
-                                            <!-- Input trigger -->
-                                            <input type="text" id="termsSelectInput" class="form-select w-100 rounded-3"
-                                                placeholder="Select Terms" readonly>
-
-                                            <!-- Custom dropdown -->
-                                            <div class="terms-dropdown-menu bg-white shadow rounded-3 p-2 position-absolute d-none"
-                                                id="termsDropdown"
-                                                style="top: 100%; left: 0; width: 100%; z-index: 1055;">
-
-                                                <!-- Search input -->
-                                                <div class="position-relative mb-3">
-                                                    <input class="form-control rounded-3" id="termsSearchInput"
-                                                        placeholder="Search Terms..." style="padding-left: 35px;">
-                                                    <span class="position-absolute top-50 translate-middle-y"
-                                                        style="left: 10px;">
-                                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                                    </span>
-                                                </div>
-
-                                                <!-- Terms list -->
-                                                <div class="terms-list-area">
-                                                    <ul class="list-unstyled mb-2" id="termsList">
-                                                        <li>
-                                                            <div type="button"
-                                                                class="w-100 text-start term-item px-3 py-2"
-                                                                data-id="1">Net 7</div>
-                                                        </li>
-                                                        <li>
-                                                            <div type="button"
-                                                                class="w-100 text-start term-item px-3 py-2"
-                                                                data-id="2">Net 15</div>
-                                                        </li>
-                                                        <li>
-                                                            <div type="button"
-                                                                class="w-100 text-start term-item px-3 py-2"
-                                                                data-id="3">Net 30</div>
-                                                        </li>
-                                                        <li>
-                                                            <div type="button"
-                                                                class="w-100 text-start term-item px-3 py-2"
-                                                                data-id="4">Due on Receipt</div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
-                                                <!-- Bottom button -->
-                                                <div class="text-center border-top pt-2">
-                                                    <button type="button" type="button"
-                                                        class="btn btn-outline-primary btn-sm"><i
-                                                            class="fa-solid fa-gear me-3"></i>Configure Terms</button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Hidden field to store selected ID -->
-                                        <input type="hidden" name="term_id" id="selectedTermId">
-
-                                    </div>
-
-                                </div>
-                                <div class="col-xl-3 col-lg-3 col-md-6">
-                                    <div class="d-flex justify-content-between align-items-center gap-3">
-                                        <div class="h-100 flex-shrink-0 d-flex align-items-center text-nowrap">
-                                            Due Date
-                                        </div>
-                                        <input type="text" class="form-control w-100 rounded-3">
-                                    </div>
+                            <div class="col-xl-4 col-lg-4 col-md-9">
+                                <div class="position-relative">
+                                    <input type="text" class="form-control rounded-3 " style="padding-right: 40px; "
+                                        placeholder="Enter Invoice Number">
+                                    <!-- <button type="button"
+                                            class="invoiceSettingBtn position-absolute translate-middle-y top-50"
+                                            style="right: 10px;">
+                                            <i class="fa-solid fa-gear"></i>
+                                        </button> -->
                                 </div>
                             </div>
                         </div>
-                        <!-- invoice details area end -->
-
-                        <!-- ==========Salesperson area start========== -->
-                        <div class="bg-white py-4 px-3 border-bottom">
-                            <div class="row g-md-4 g-0 py-4 px-2">
-                                <div class="col-xl-2 col-lg-2 col-md-3">
-                                    <div class="h-100 d-flex align-items-center">
-                                        <label for="">Sales Person</label>
-                                    </div>
+                        <div class="row g-md-4 g-0 py-4 px-2">
+                            <div class="col-xl-2 col-lg-2 col-md-3">
+                                <div class="h-100 d-flex align-items-center">
+                                    <label for="">Order Number</label>
                                 </div>
-                                <div class="col-xl-4 col-lg-4 col-md-9">
-                                    <div class="position-relative" style="z-index: 1050;">
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-9">
+                                <input type="text" class="form-control rounded-3 " placeholder="Enter Order Number">
+                            </div>
+                        </div>
+                        <div class="row g-md-4 g-3 py-4 px-2">
+                            <div class="col-xl-2 col-lg-2 col-md-3">
+                                <div class="h-100 d-flex align-items-center">
+                                    <label for="" class="text-danger">Invoice Date</label>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-9">
+                                <input type="date" class="form-control rounded-3 " placeholder="Enter Date">
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="d-flex justify-content-between align-items-center gap-3">
+                                    <div class="h-100 flex-shrink-0 d-flex align-items-center">
+                                        Terms
+                                    </div>
+                                    <div class="position-relative w-100" style="z-index: 1050;">
                                         <!-- Input trigger -->
-                                        <input type="text" id="salesPersonSelectInput" class="form-select rounded-3"
-                                            placeholder="Select Sales Person" readonly>
+                                        <input type="text" id="termsSelectInput" class="form-select w-100 rounded-3"
+                                            placeholder="Select Terms" readonly>
 
                                         <!-- Custom dropdown -->
-                                        <div class="salesperson-dropdown-menu bg-white shadow rounded-3 p-2 position-absolute d-none"
-                                            id="salesPersonDropdown"
-                                            style="top: 100%; left: 0; width: 100%; z-index: 1055;">
+                                        <div class="terms-dropdown-menu bg-white shadow rounded-3 p-2 position-absolute d-none"
+                                            id="termsDropdown" style="top: 100%; left: 0; width: 100%; z-index: 1055;">
 
                                             <!-- Search input -->
                                             <div class="position-relative mb-3">
-                                                <input class="form-control rounded-3" id="salesPersonSearchInput"
-                                                    placeholder="Search Sales Person..." style="padding-left: 35px;">
+                                                <input class="form-control rounded-3" id="termsSearchInput"
+                                                    placeholder="Search Terms..." style="padding-left: 35px;">
                                                 <span class="position-absolute top-50 translate-middle-y"
                                                     style="left: 10px;">
                                                     <i class="fa-solid fa-magnifying-glass"></i>
                                                 </span>
                                             </div>
 
-                                            <!-- Sales person list -->
-                                            <div class="salesperson-list-area">
-                                                <ul class="list-unstyled mb-2" id="salesPersonList">
+                                            <!-- Terms list -->
+                                            <div class="terms-list-area">
+                                                <ul class="list-unstyled mb-2" id="termsList">
                                                     <li>
-                                                        <div type="button"
-                                                            class="w-100 text-start salesperson-item px-3 py-2"
-                                                            data-id="1">
-                                                            Rana Ahmed</div>
+                                                        <div type="button" class="w-100 text-start term-item px-3 py-2"
+                                                            data-id="1">Net 7</div>
                                                     </li>
                                                     <li>
-                                                        <div type="button"
-                                                            class="w-100 text-start salesperson-item px-3 py-2"
-                                                            data-id="2">
-                                                            Sumi Akter</div>
+                                                        <div type="button" class="w-100 text-start term-item px-3 py-2"
+                                                            data-id="2">Net 15</div>
                                                     </li>
                                                     <li>
-                                                        <div type="button"
-                                                            class="w-100 text-start salesperson-item px-3 py-2"
-                                                            data-id="3">
-                                                            Mahfuz Rahman</div>
+                                                        <div type="button" class="w-100 text-start term-item px-3 py-2"
+                                                            data-id="3">Net 30</div>
                                                     </li>
                                                     <li>
-                                                        <div type="button"
-                                                            class="w-100 text-start salesperson-item px-3 py-2"
-                                                            data-id="4">
-                                                            Tania Islam</div>
+                                                        <div type="button" class="w-100 text-start term-item px-3 py-2"
+                                                            data-id="4">Due on Receipt</div>
                                                     </li>
                                                 </ul>
                                             </div>
 
                                             <!-- Bottom button -->
                                             <div class="text-center border-top pt-2">
-                                                <button type="button" type="button"
+                                                <button type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#termsDetailsPopup"
                                                     class="btn btn-outline-primary btn-sm"><i
-                                                        class="fa-solid fa-gear me-3"></i> Manage Sales person</button>
+                                                        class="fa-solid fa-gear me-3"></i>Configure Terms</button>
                                             </div>
                                         </div>
                                     </div>
 
                                     <!-- Hidden field to store selected ID -->
-                                    <input type="hidden" name="salesperson_id" id="selectedSalesPersonId">
+                                    <input type="hidden" name="term_id" id="selectedTermId">
 
+
+                                    <!-- terms details popup -->
+                                    <div class="modal fade" id="termsDetailsPopup" aria-hidden="true" tabindex="-1">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title fw-medium" >Configure Payment Terms</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                   <div class="p-3">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered fs-12 terms_details_table">
+                                                           <thead >
+                                                            <tr class="text-uppercase text-nowrap fw-medium">
+                                                                <th class="bg-light text-secondary">
+                                                                    Term NAME
+                                                                </th>
+                                                                <th class="text-end bg-light text-secondary">
+                                                                    NUMBER OF DAYS
+                                                                </th>
+                                                                <th class="text-center bg-light text-secondary">
+                                                                   Action
+                                                                </th>
+                                                            </tr>
+                                                           </thead>
+                                                           <tbody>
+                                                            <tr class="align-middle text-nowrap trems_data_row">
+                                                                <td style="width: 150px;">
+                                                                    <input type="text"
+                                                                        class="form-control border-0 text-start fs-12"
+                                                                        value="Net 15">
+                                                                </td>
+                                                                <td style="width: 150px;">
+                                                                    <input type="text"
+                                                                        class="form-control border-0 text-end fs-12"
+                                                                        value="30">
+                                                                </td>
+                                                                <td style="width: 200px;" class=" position-relative term_data_action">
+                                                                    <div
+                                                                        class="d-flex justify-content-center align-items-center">
+                                                                        <button type="button"
+                                                                            class="bg-transparent text-primary fs-12 border-end pe-2">
+                                                                            Marks as Default
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="bg-transparent text-danger fs-12">
+                                                                            <i class="fa-solid fa-trash me-2"></i>
+                                                                            Delete
+                                                                        </button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-middle text-nowrap trems_data_row">
+                                                                <td style="width: 150px;">
+                                                                    <input type="text"
+                                                                        class="form-control border-0 text-start fs-12"
+                                                                        value="Net 15">
+                                                                </td>
+                                                                <td style="width: 150px;">
+                                                                    <input type="text"
+                                                                        class="form-control border-0 text-end fs-12"
+                                                                        value="30">
+                                                                </td>
+                                                                <td style="width: 200px;" class=" position-relative term_data_action">
+                                                                    <div
+                                                                        class="d-flex justify-content-center align-items-center">
+                                                                        <button type="button"
+                                                                            class="bg-transparent text-primary fs-12 border-end pe-2">
+                                                                            Marks as Default
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="bg-transparent text-danger fs-12">
+                                                                            <i class="fa-solid fa-trash me-2"></i>
+                                                                            Delete
+                                                                        </button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-middle text-nowrap trems_data_row">
+                                                                <td style="width: 150px;">
+                                                                    <input type="text"
+                                                                        class="form-control border-0 text-start fs-12"
+                                                                        value="Net 15">
+                                                                </td>
+                                                                <td style="width: 150px;">
+                                                                    <input type="text"
+                                                                        class="form-control border-0 text-end fs-12"
+                                                                        value="30">
+                                                                </td>
+                                                                <td style="width: 200px;" class=" position-relative term_data_action">
+                                                                    <div
+                                                                        class="d-flex justify-content-center align-items-center">
+                                                                        <button type="button"
+                                                                            class="bg-transparent text-primary fs-12 border-end pe-2">
+                                                                            Marks as Default
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="bg-transparent text-danger fs-12">
+                                                                            <i class="fa-solid fa-trash me-2"></i>
+                                                                            Delete
+                                                                        </button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-middle text-nowrap trems_data_row">
+                                                                <td style="width: 150px;">
+                                                                    <input type="text"
+                                                                        class="form-control border-0 text-start fs-12"
+                                                                        value="Net 15">
+                                                                </td>
+                                                                <td style="width: 150px;">
+                                                                    <input type="text"
+                                                                        class="form-control border-0 text-end fs-12"
+                                                                        value="30">
+                                                                </td>
+                                                                <td style="width: 200px;" class=" position-relative term_data_action">
+                                                                    <div
+                                                                        class="d-flex justify-content-center align-items-center">
+                                                                        <button type="button"
+                                                                            class="bg-transparent text-primary fs-12 border-end pe-2">
+                                                                            Marks as Default
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="bg-transparent text-danger fs-12">
+                                                                            <i class="fa-solid fa-trash me-2"></i>
+                                                                            Delete
+                                                                        </button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                           </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <button type="button" class="bg-transparent text-secondary fw-medium fs-14 d-flex justify-content-start align-items-center">
+                                                       <i class="fa-solid fa-circle-plus me-2 text-primary fs-5 "></i> <span>Add New</span>
+                                                    </button>
+                                                   </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-secondary" data-bs-toggle="modal"
+                                                        data-bs-dismiss="modal">Cancel</button>
+                                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-dismiss="modal">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="d-flex justify-content-between align-items-center gap-3">
+                                    <div class="h-100 flex-shrink-0 d-flex align-items-center text-nowrap">
+                                        Due Date
+                                    </div>
+                                    <input type="text" class="form-control w-100 rounded-3">
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <!-- invoice details area end -->
 
-                        <!-- ==========Salesperson area end========== -->
+                    <!-- ==========Salesperson area start========== -->
+                    <div class="bg-white py-4 px-3 border-bottom">
+                        <div class="row g-md-4 g-0 py-4 px-2">
+                            <div class="col-xl-2 col-lg-2 col-md-3">
+                                <div class="h-100 d-flex align-items-center">
+                                    <label for="">Sales Person</label>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-9">
+                                <div class="position-relative" style="z-index: 1;">
+                                    <!-- Input trigger -->
+                                    <input type="text" id="salesPersonSelectInput" class="form-select rounded-3"
+                                        placeholder="Select Sales Person" readonly>
 
+                                    <!-- Custom dropdown -->
+                                    <div class="salesperson-dropdown-menu bg-white shadow rounded-3 p-2 position-absolute d-none"
+                                        id="salesPersonDropdown" style="top: 100%; left: 0; width: 100%; z-index: 1;">
 
-                        <!-- =================subject area start=============== -->
-                        <div class="bg-white py-4 px-3 border-bottom">
-                            <div class="row g-md-4 g-0 py-4 px-2">
-                                <div class="col-xl-2 col-lg-2 col-md-3">
-                                    <div class="h-100 d-flex align-items-start">
-                                        <label for="">Subject</label>
+                                        <!-- Search input -->
+                                        <div class="position-relative mb-3">
+                                            <input class="form-control rounded-3" id="salesPersonSearchInput"
+                                                placeholder="Search Sales Person..." style="padding-left: 35px;">
+                                            <span class="position-absolute top-50 translate-middle-y"
+                                                style="left: 10px;">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </span>
+                                        </div>
+
+                                        <!-- Sales person list -->
+                                        <div class="salesperson-list-area">
+                                            <ul class="list-unstyled mb-2" id="salesPersonList">
+                                                <li>
+                                                    <div type="button"
+                                                        class="w-100 text-start salesperson-item px-3 py-2" data-id="1">
+                                                        Rana Ahmed</div>
+                                                </li>
+                                                <li>
+                                                    <div type="button"
+                                                        class="w-100 text-start salesperson-item px-3 py-2" data-id="2">
+                                                        Sumi Akter</div>
+                                                </li>
+                                                <li>
+                                                    <div type="button"
+                                                        class="w-100 text-start salesperson-item px-3 py-2" data-id="3">
+                                                        Mahfuz Rahman</div>
+                                                </li>
+                                                <li>
+                                                    <div type="button"
+                                                        class="w-100 text-start salesperson-item px-3 py-2" data-id="4">
+                                                        Tania Islam</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Bottom button -->
+                                        <div class="text-center border-top pt-2">
+                                            <button type="button" type="button"
+                                                class="btn btn-outline-primary btn-sm"><i
+                                                    class="fa-solid fa-gear me-3"></i> Manage Sales person</button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-4 col-lg-4 col-md-9">
-                                    <textarea name="" id="" class="form-control" rows="4"
-                                        placeholder="Let your customer know what this invoice is for"></textarea>
-                                </div>
+
+                                <!-- Hidden field to store selected ID -->
+                                <input type="hidden" name="salesperson_id" id="selectedSalesPersonId">
+
+                                  <!-- Manage sales person popup -->
+                                    <div class="modal fade" id="termsDetailsPopup" aria-hidden="true" tabindex="-1">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title fw-medium" >Manage Salespersons</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                   <div class="p-3">
+                                                  
+                                                    <button type="button" class="bg-transparent text-secondary fw-medium fs-14 d-flex justify-content-start align-items-center">
+                                                       <i class="fa-solid fa-circle-plus me-2 text-primary fs-5 "></i> <span>Add New</span>
+                                                    </button>
+                                                   </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-secondary" data-bs-toggle="modal"
+                                                        data-bs-dismiss="modal">Cancel</button>
+                                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-dismiss="modal">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                             </div>
                         </div>
-                        <!-- =================subject area end=============== -->
+                    </div>
 
-                        <!-- ==================Items add area start=================== -->
-                        <div class="items_add_area bg-white py-4 px-3 border-bottom">
-                            <div class="additems_header d-flex justify-content-between align-items-center gap-3 ">
-                                <h1>Item Table</h1>
-                                <div class="d-flex justify-content-end align-items-center gap-3">
-                                    <button type="button"><i class="fa-solid fa-barcode me-2"></i>Scan Items</button>
-                                    <button type="button"><i class="fa-solid fa-circle-check me-2"></i>Bulk
-                                        Action</button>
+                    <!-- ==========Salesperson area end========== -->
+
+
+                    <!-- =================subject area start=============== -->
+                    <div class="bg-white py-4 px-3 border-bottom">
+                        <div class="row g-md-4 g-0 py-4 px-2">
+                            <div class="col-xl-2 col-lg-2 col-md-3">
+                                <div class="h-100 d-flex align-items-start">
+                                    <label for="">Subject</label>
                                 </div>
                             </div>
-                            <div class="table-responsive">
-                                <table class="table product_table table-bordered">
-                                    <thead>
-                                        <tr class="text-nowrap">
-                                            <th style="min-width: 500px;">
-                                                item details
-                                            </th>
-                                            <th style="min-width: 150px;">
-                                                quantity
-                                            </th>
-                                            <th style="min-width: 150px;">
-                                                <div class="d-flex align-items-center justify-content-end gap-2">
-                                                    <span>rate</span>
-                                                    <button type="button" class="bg-transparent"
-                                                        style="height: 25px; width: 25px;" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        title="You can perform basic calculations directly in this field using parentheses () and these arithmetic operators: +-/*">
-                                                        <svg viewBox="0 0 24 24" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                                                stroke-linejoin="round"></g>
-                                                            <g id="SVGRepo_iconCarrier">
-                                                                <path
-                                                                    d="M14 7C14 6.44771 14.4477 6 15 6H16V5C16 4.44772 16.4477 4 17 4C17.5523 4 18 4.44772 18 5V6H19C19.5523 6 20 6.44771 20 7C20 7.55229 19.5523 8 19 8H18V9C18 9.55228 17.5523 10 17 10C16.4477 10 16 9.55228 16 9V8H15C14.4477 8 14 7.55229 14 7Z"
-                                                                    fill="#0F0F0F"></path>
-                                                                <path
-                                                                    d="M14 15C14 14.4477 14.4477 14 15 14H19C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16H15C14.4477 16 14 15.5523 14 15Z"
-                                                                    fill="#0F0F0F"></path>
-                                                                <path
-                                                                    d="M15 18C14.4477 18 14 18.4477 14 19C14 19.5523 14.4477 20 15 20H19C19.5523 20 20 19.5523 20 19C20 18.4477 19.5523 18 19 18H15Z"
-                                                                    fill="#0F0F0F"></path>
-                                                                <path
-                                                                    d="M5 6C4.44772 6 4 6.44771 4 7C4 7.55229 4.44772 8 5 8H9C9.55228 8 10 7.55229 10 7C10 6.44771 9.55228 6 9 6H5Z"
-                                                                    fill="#0F0F0F"></path>
-                                                                <path
-                                                                    d="M5.92512 14.5109C5.5346 14.1204 4.90143 14.1204 4.51091 14.5109C4.12039 14.9014 4.12039 15.5346 4.51091 15.9251L5.5858 17L4.50337 18.0824C4.11284 18.4729 4.11284 19.1061 4.50337 19.4966C4.89389 19.8872 5.52705 19.8872 5.91758 19.4966L7.00002 18.4142L8.08944 19.5036C8.47996 19.8941 9.11313 19.8941 9.50365 19.5036C9.89418 19.1131 9.89418 18.4799 9.50365 18.0894L8.41423 17L9.50194 15.9123C9.89246 15.5218 9.89246 14.8886 9.50194 14.4981C9.11141 14.1075 8.47825 14.1075 8.08772 14.4981L7.00002 15.5858L5.92512 14.5109Z"
-                                                                    fill="#0F0F0F"></path>
-                                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                    d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V11H13V3H20ZM21 13V20C21 20.5523 20.5523 21 20 21H13V13H21ZM4 3H11V11H3V4C3 3.44772 3.44772 3 4 3ZM3 20V13H11V21H4C3.44772 21 3 20.5523 3 20Z"
-                                                                    fill="#0F0F0F"></path>
-                                                            </g>
-                                                        </svg>
+                            <div class="col-xl-4 col-lg-4 col-md-9">
+                                <textarea name="" id="" class="form-control" rows="4"
+                                    placeholder="Let your customer know what this invoice is for"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- =================subject area end=============== -->
+
+                    <!-- ==================Items add area start=================== -->
+                    <div class="items_add_area bg-white py-4 px-3 border-bottom">
+                        <div class="additems_header d-flex justify-content-between align-items-center gap-3 ">
+                            <h1>Item Table</h1>
+                            <div class="d-flex justify-content-end align-items-center gap-3">
+                                <button type="button"><i class="fa-solid fa-barcode me-2"></i>Scan Items</button>
+                                <button type="button"><i class="fa-solid fa-circle-check me-2"></i>Bulk
+                                    Action</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table product_table table-bordered">
+                                <thead>
+                                    <tr class="text-nowrap">
+                                        <th style="min-width: 500px;">
+                                            item details
+                                        </th>
+                                        <th style="min-width: 150px;">
+                                            quantity
+                                        </th>
+                                        <th style="min-width: 150px;">
+                                            <div class="d-flex align-items-center justify-content-end gap-2">
+                                                <span>rate</span>
+                                                <button type="button" class="bg-transparent"
+                                                    style="height: 25px; width: 25px;" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top"
+                                                    title="You can perform basic calculations directly in this field using parentheses () and these arithmetic operators: +-/*">
+                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                            stroke-linejoin="round"></g>
+                                                        <g id="SVGRepo_iconCarrier">
+                                                            <path
+                                                                d="M14 7C14 6.44771 14.4477 6 15 6H16V5C16 4.44772 16.4477 4 17 4C17.5523 4 18 4.44772 18 5V6H19C19.5523 6 20 6.44771 20 7C20 7.55229 19.5523 8 19 8H18V9C18 9.55228 17.5523 10 17 10C16.4477 10 16 9.55228 16 9V8H15C14.4477 8 14 7.55229 14 7Z"
+                                                                fill="#0F0F0F"></path>
+                                                            <path
+                                                                d="M14 15C14 14.4477 14.4477 14 15 14H19C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16H15C14.4477 16 14 15.5523 14 15Z"
+                                                                fill="#0F0F0F"></path>
+                                                            <path
+                                                                d="M15 18C14.4477 18 14 18.4477 14 19C14 19.5523 14.4477 20 15 20H19C19.5523 20 20 19.5523 20 19C20 18.4477 19.5523 18 19 18H15Z"
+                                                                fill="#0F0F0F"></path>
+                                                            <path
+                                                                d="M5 6C4.44772 6 4 6.44771 4 7C4 7.55229 4.44772 8 5 8H9C9.55228 8 10 7.55229 10 7C10 6.44771 9.55228 6 9 6H5Z"
+                                                                fill="#0F0F0F"></path>
+                                                            <path
+                                                                d="M5.92512 14.5109C5.5346 14.1204 4.90143 14.1204 4.51091 14.5109C4.12039 14.9014 4.12039 15.5346 4.51091 15.9251L5.5858 17L4.50337 18.0824C4.11284 18.4729 4.11284 19.1061 4.50337 19.4966C4.89389 19.8872 5.52705 19.8872 5.91758 19.4966L7.00002 18.4142L8.08944 19.5036C8.47996 19.8941 9.11313 19.8941 9.50365 19.5036C9.89418 19.1131 9.89418 18.4799 9.50365 18.0894L8.41423 17L9.50194 15.9123C9.89246 15.5218 9.89246 14.8886 9.50194 14.4981C9.11141 14.1075 8.47825 14.1075 8.08772 14.4981L7.00002 15.5858L5.92512 14.5109Z"
+                                                                fill="#0F0F0F"></path>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V11H13V3H20ZM21 13V20C21 20.5523 20.5523 21 20 21H13V13H21ZM4 3H11V11H3V4C3 3.44772 3.44772 3 4 3ZM3 20V13H11V21H4C3.44772 21 3 20.5523 3 20Z"
+                                                                fill="#0F0F0F"></path>
+                                                        </g>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </th>
+                                        <th style="min-width: 200px;">
+                                            discount
+                                        </th>
+                                        <th style="min-width: 200px;">
+                                            amount
+                                        </th>
+                                        <th>
+                                            action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="text-nowrap">
+                                        <td class="text-start">
+                                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                                <div class="product_image_box flex-shrink-0">
+                                                    <img src="assets/images/productimage.jpeg" alt="">
+                                                </div>
+                                                <div class="product_description_area w-100">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <h1 class="product-name fs-14 fw-medium">Mouse - Logitech MX
+                                                        </h1>
+                                                        <div
+                                                            class="d-flex justify-content-end align-items-center gap-2">
+                                                            <button type="button"
+                                                                class="border rounded-circle opacity-50">
+                                                                <i class="fa-solid fa-ellipsis"></i>
+                                                            </button>
+                                                            <button type="button"
+                                                                class="border rounded-circle opacity-50">
+                                                                <i class="fa-regular fa-circle-xmark"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <textarea name="" id="" class="form-control fs-12 mt-1" rows="2"
+                                                        placeholder="Enter Items Description"></textarea>
+                                                </div>
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+                                            <input type="text" class="form-control border-0 text-end" value="00.0">
+                                            <div class="d-flex justify-content-start align-items-end flex-column gap-2">
+                                                <h2 class="fs-12 mb-0 mt-1">Stock On hand:</h2>
+                                                <div class="d-flex justify-content-end align-items-center gap-2">
+                                                    <span class="text-danger">-100</span>
+                                                    <div class="position-relative ">
+                                                        <button type="button" data-bs-toggle="dropdown"
+                                                            class="rounded-circle text-primary stockDetailsBtn px-1">
+                                                            <i class="fa-solid fa-angle-down"></i>
+                                                        </button>
+                                                        <div class="position-absolute stockDetails_popup top-100 translate-middle-x bg-white shadow rounded-3"
+                                                            style="width: 300px;">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div
+                                                                        class="modal-header bg-light p-3 d-flex justify-content-between align-items-center">
+                                                                        <h5 class="modal-title fs-6">Stock Details
+                                                                        </h5>
+                                                                        <button type="button"
+                                                                            class="btn-close stockDetails_popupClose"
+                                                                            data-bs-dismiss="modal"
+                                                                            aria-label="Close"></button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="p-3">
+                                                                            <table>
+                                                                                <tr>
+                                                                                    <td class="pe-4 py-2">
+                                                                                        Stock on Hand
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        : -100.00
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="pe-4 py-2">
+                                                                                        <button type="button"
+                                                                                            class="bg-transparent"
+                                                                                            style="border-bottom: 1px dashed #4790bd;"
+                                                                                            data-bs-toggle="tooltip"
+                                                                                            data-bs-placement="top"
+                                                                                            title="Stock that is Committed to sales order(s) but not yet invoiced">
+                                                                                            Committed Stock
+                                                                                        </button>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        : 1.00
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="pe-4 py-2">
+                                                                                        <button type="button"
+                                                                                            class="bg-transparent"
+                                                                                            style="border-bottom: 1px dashed #4790bd;"
+                                                                                            data-bs-toggle="tooltip"
+                                                                                            data-bs-placement="top"
+                                                                                            title="Available for sale = Stock on Hand - Committed Stock">
+                                                                                            Available for Sale
+                                                                                        </button>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        : -101.00
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control border-0 text-end" value="00.0">
+                                            <button type="button"
+                                                class="mt-2 text-primary bg-transparent fs-12 float-end fw-normal">Recent
+                                                Transactions</button>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-between align-items-center gap-3">
+                                                <input type="text" class="form-control border-0 text-end w-100"
+                                                    value="00.0">
+                                                <select name="" id="" class="form-select border-0"
+                                                    style="width: 100px;">
+                                                    <option value="">%</option>
+                                                    <option value="">$</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td style="vertical-align: middle;" class="fs-6 text-end">
+                                            00
+                                        </td>
+                                        <td class="actionBtn fs-6" style="vertical-align: middle;">
+                                            <div class="d-flex justify-content-center align-items-center gap-3">
+                                                <span>
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </span>
+                                                <span>
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-nowrap">
+                                        <td class="text-start">
+                                            <div class="d-flex justify-content-between align-items-center gap-2">
+                                                <div class="product_image_box flex-shrink-0">
+                                                    <span class="demoImage fs-1 opacity-50">
+                                                        <i class="fa-solid fa-image"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="position-relative product-input-wrapper w-100"
+                                                    style="z-index: 1;">
+                                                    <input type="text"
+                                                        class="form-control border-0 text-start product-input w-100"
+                                                        placeholder="Search Product" autocomplete="off" readonly
+                                                        style="text-align: left; direction: ltr;">
+
+                                                    <input type="hidden" name="products[][id]" class="product-id-input">
+
+                                                    <!-- Dropdown -->
+                                                    <div class="product-dropdown position-absolute bg-white shadow rounded-3 p-2 d-none"
+                                                        style="top: 100%; left: 0; width: 100%; z-index: 1055;">
+                                                        <div class="position-relative mb-3">
+                                                            <input type="text"
+                                                                class="form-control product-search-box rounded-3"
+                                                                placeholder="Search..." style="padding-left: 35px;">
+                                                            <span class="position-absolute top-50 translate-middle-y"
+                                                                style="left: 10px;">
+                                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                            </span>
+                                                        </div>
+
+                                                        <ul class="list-unstyled product-list mb-0">
+                                                            <li class="border-bottom">
+                                                                <div class="dropdown-item text-start product-item"
+                                                                    data-id="1">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <div>
+                                                                            <h1 class="mb-1 fs-14 fw-medium"
+                                                                                id="itemName">
+                                                                                Laptop - Dell XPS</h1>
+                                                                            <span class=" fs-12 fw-medium">Rate:
+                                                                                <span id="rate">$200.00</span></span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <h1 class="mb-1 fs-14 fw-medium">Stock
+                                                                                On
+                                                                                Hand</h1>
+                                                                            <span class=" fs-12 fw-medium" id>100</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="border-bottom">
+                                                                <div class="dropdown-item text-start product-item"
+                                                                    data-id="2">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <div>
+                                                                            <h1 class="mb-1 fs-14 fw-medium">
+                                                                                Mouse - Logitech MX</h1>
+                                                                            <span class=" fs-12 fw-medium">Rate:
+                                                                                $200.00</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <h1 class="mb-1 fs-14 fw-medium">Stock
+                                                                                On
+                                                                                Hand</h1>
+                                                                            <span class=" fs-12 fw-medium">100</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="border-bottom">
+                                                                <div class="dropdown-item text-start product-item"
+                                                                    data-id="3">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <div>
+                                                                            <h1 class="mb-1 fs-14 fw-medium">
+                                                                                Keyboard - Keychron K2</h1>
+                                                                            <span class=" fs-12 fw-medium">Rate:
+                                                                                $200.00</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <h1 class="mb-1 fs-14 fw-medium">Stock
+                                                                                On
+                                                                                Hand</h1>
+                                                                            <span class=" fs-12 fw-medium">100</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="border-bottom">
+                                                                <div class="dropdown-item text-start product-item"
+                                                                    data-id="4">
+                                                                    <div
+                                                                        class="d-flex justify-content-between align-items-center">
+                                                                        <div>
+                                                                            <h1 class="mb-1 fs-14 fw-medium">
+                                                                                Monitor - LG Ultrawide</h1>
+                                                                            <span class=" fs-12 fw-medium">Rate:
+                                                                                $200.00</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <h1 class="mb-1 fs-14 fw-medium">Stock
+                                                                                On
+                                                                                Hand</h1>
+                                                                            <span class=" fs-12 fw-medium">100</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="new-customer-view px-3 py-2 mt-2 border-top">
+                                                            <button type="button"
+                                                                class="d-flex justify-content-start align-items-center gap-3 w-100">
+                                                                <span class="icon"><i
+                                                                        class="fa-solid fa-circle-plus"></i></span>
+                                                                <span class="content">Add New Items</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+                                            <input type="text" class="form-control border-0 text-end" value="00.0">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control border-0 text-end" value="00.0">
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-between align-items-center gap-3">
+                                                <input type="text" class="form-control border-0 text-end w-100"
+                                                    value="00.0">
+                                                <select name="" id="" class="form-select border-0"
+                                                    style="width: 100px;">
+                                                    <option value="">%</option>
+                                                    <option value="">$</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td style="vertical-align: middle;" class="fs-6 text-end">
+                                            00
+                                        </td>
+                                        <td class="actionBtn fs-6" style="vertical-align: middle;">
+                                            <div class="d-flex justify-content-center align-items-center gap-3">
+                                                <span>
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </span>
+                                                <span>
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot style="border-color: #ffffff;">
+                                    <tr>
+                                        <td colspan="3">
+                                            <div class="d-flex w-100 h-100 justify-content-between align-items-start  flex-column"
+                                                style="row-gap: 7rem;">
+                                                <div
+                                                    class="d-flex w-100 justify-content-start align-items-center gap-3">
+                                                    <button type="button" class="btn"
+                                                        style="background: rgb(209, 209, 209);">
+                                                        <i class="fa-solid fa-circle-plus text-primary"></i>
+                                                        Add New Row
+                                                    </button>
+                                                    <button type="button" class="btn "
+                                                        style="background: rgb(209, 209, 209);">
+                                                        <i class="fa-solid fa-circle-plus text-primary"></i>
+                                                        Add Items In Bulk
                                                     </button>
                                                 </div>
-                                            </th>
-                                            <th style="min-width: 200px;">
-                                                discount
-                                            </th>
-                                            <th style="min-width: 200px;">
-                                                amount
-                                            </th>
-                                            <th>
-                                                action
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="text-nowrap">
-                                            <td class="text-start">
-                                                <div class="d-flex justify-content-between align-items-center gap-2">
-                                                    <div class="product_image_box flex-shrink-0">
-                                                        <img src="assets/images/productimage.jpeg" alt="">
-                                                    </div>
-                                                    <div class="product_description_area w-100">
-                                                        <div class="d-flex justify-content-between align-items-center">
-                                                            <h1 class="product-name fs-14 fw-medium">Mouse - Logitech MX
-                                                            </h1>
-                                                            <div
-                                                                class="d-flex justify-content-end align-items-center gap-2">
-                                                                <button type="button"
-                                                                    class="border rounded-circle opacity-50">
-                                                                    <i class="fa-solid fa-ellipsis"></i>
-                                                                </button>
-                                                                <button type="button"
-                                                                    class="border rounded-circle opacity-50">
-                                                                    <i class="fa-regular fa-circle-xmark"></i>
-                                                                </button>
+                                                <div class="customer_note w-100">
+                                                    <label for="Customer Note">
+                                                        Customer Note
+                                                    </label> <br>
+                                                    <textarea class="form-control w-100 rounded-3" name="" rows="4"
+                                                        id=""></textarea>
+                                                    <label for="" class="fs-12">Will be displayed on the
+                                                        invoice</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td colspan="3">
+                                            <div class="p-4 bg-light mt-3 rounded-3">
+                                                <table class=" w-100 border-0 bill_summeryTable">
+                                                    <tr>
+                                                        <td class="fs-6 fw-bold" colspan="2">Sub Total</td>
+                                                        <td class="fs-6 fw-bold text-end">00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Shipping Charges</td>
+                                                        <td>
+                                                            <div class="d-flex justify-content-center">
+                                                                <input type="text" class="form-control"
+                                                                    style="width: 150px;">
                                                             </div>
-                                                        </div>
-                                                        <textarea name="" id="" class="form-control fs-12 mt-1" rows="2"
-                                                            placeholder="Enter Items Description"></textarea>
-                                                    </div>
-                                                </div>
-
-                                            </td>
-
-
-                                            <td>
-                                                <input type="text" class="form-control border-0 text-end" value="00.0">
-                                                <div
-                                                    class="d-flex justify-content-start align-items-end flex-column gap-2">
-                                                    <h2 class="fs-12 mb-0 mt-1">Stock On hand:</h2>
-                                                    <div class="d-flex justify-content-end align-items-center gap-2">
-                                                        <span class="text-danger">-100</span>
-                                                        <div class="position-relative ">
-                                                            <button type="button" data-bs-toggle="dropdown"
-                                                                class="rounded-circle text-primary stockDetailsBtn px-1">
-                                                                <i class="fa-solid fa-angle-down"></i>
-                                                            </button>
-                                                            <div class="position-absolute stockDetails_popup top-100 translate-middle-x bg-white shadow rounded-3"
-                                                                style="width: 300px;">
-                                                                <div class="modal-dialog">
-                                                                    <div class="modal-content">
-                                                                        <div
-                                                                            class="modal-header bg-light p-3 d-flex justify-content-between align-items-center">
-                                                                            <h5 class="modal-title fs-6">Stock Details
-                                                                            </h5>
-                                                                            <button type="button"
-                                                                                class="btn-close stockDetails_popupClose"
-                                                                                data-bs-dismiss="modal"
-                                                                                aria-label="Close"></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <div class="p-3">
-                                                                                <table>
-                                                                                    <tr>
-                                                                                        <td class="pe-4 py-2">
-                                                                                            Stock on Hand
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            : -100.00
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td class="pe-4 py-2">
-                                                                                            <button type="button"
-                                                                                                class="bg-transparent"
-                                                                                                style="border-bottom: 1px dashed #4790bd;"
-                                                                                                data-bs-toggle="tooltip"
-                                                                                                data-bs-placement="top"
-                                                                                                title="Stock that is Committed to sales order(s) but not yet invoiced">
-                                                                                                Committed Stock
-                                                                                            </button>
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            : 1.00
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td class="pe-4 py-2">
-                                                                                            <button type="button"
-                                                                                                class="bg-transparent"
-                                                                                                style="border-bottom: 1px dashed #4790bd;"
-                                                                                                data-bs-toggle="tooltip"
-                                                                                                data-bs-placement="top"
-                                                                                                title="Available for sale = Stock on Hand - Committed Stock">
-                                                                                                Available for Sale
-                                                                                            </button>
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            : -101.00
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </table>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex justify-content-start">
+                                                                <input type="text" value="Adjustment"
+                                                                    class="form-control" style="width: 150px;">
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control border-0 text-end" value="00.0">
-                                                <button type="button"
-                                                    class="mt-2 text-primary bg-transparent fs-12 float-end fw-normal">Recent
-                                                    Transactions</button>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex justify-content-between align-items-center gap-3">
-                                                    <input type="text" class="form-control border-0 text-end w-100"
-                                                        value="00.0">
-                                                    <select name="" id="" class="form-select border-0"
-                                                        style="width: 100px;">
-                                                        <option value="">%</option>
-                                                        <option value="">$</option>
-                                                    </select>
-                                                </div>
-                                            </td>
-                                            <td style="vertical-align: middle;" class="fs-6 text-end">
-                                                00
-                                            </td>
-                                            <td class="actionBtn fs-6" style="vertical-align: middle;">
-                                                <div class="d-flex justify-content-center align-items-center gap-3">
-                                                    <span>
-                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                                                    </span>
-                                                    <span>
-                                                        <i class="fa-solid fa-xmark"></i>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="text-nowrap">
-                                            <td class="text-start">
-                                                <div class="d-flex justify-content-between align-items-center gap-2">
-                                                    <div class="product_image_box flex-shrink-0">
-                                                        <span class="demoImage fs-1 opacity-50">
-                                                            <i class="fa-solid fa-image"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="position-relative product-input-wrapper w-100"
-                                                        style="z-index: 1050;">
-                                                        <input type="text"
-                                                            class="form-control border-0 text-start product-input w-100"
-                                                            placeholder="Search Product" autocomplete="off" readonly
-                                                            style="text-align: left; direction: ltr;">
-
-                                                        <input type="hidden" name="products[][id]"
-                                                            class="product-id-input">
-
-                                                        <!-- Dropdown -->
-                                                        <div class="product-dropdown position-absolute bg-white shadow rounded-3 p-2 d-none"
-                                                            style="top: 100%; left: 0; width: 100%; z-index: 1055;">
-                                                            <div class="position-relative mb-3">
-                                                                <input type="text"
-                                                                    class="form-control product-search-box rounded-3"
-                                                                    placeholder="Search..." style="padding-left: 35px;">
-                                                                <span
-                                                                    class="position-absolute top-50 translate-middle-y"
-                                                                    style="left: 10px;">
-                                                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                                                </span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex justify-content-center">
+                                                                <input type="text" class="form-control"
+                                                                    style="width: 150px;">
                                                             </div>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            00
+                                                        </td>
+                                                    </tr>
 
-                                                            <ul class="list-unstyled product-list mb-0">
-                                                                <li class="border-bottom">
-                                                                    <div class="dropdown-item text-start product-item"
-                                                                        data-id="1">
-                                                                        <div
-                                                                            class="d-flex justify-content-between align-items-center">
-                                                                            <div>
-                                                                                <h1 class="mb-1 fs-14 fw-medium"
-                                                                                    id="itemName">Laptop -
-                                                                                    Dell XPS</h1>
-                                                                                <span class=" fs-12 fw-medium">Rate:
-                                                                                    <span
-                                                                                        id="rate">$200.00</span></span>
-                                                                            </div>
-                                                                            <div>
-                                                                                <h1 class="mb-1 fs-14 fw-medium">Stock
-                                                                                    On
-                                                                                    Hand</h1>
-                                                                                <span class=" fs-12 fw-medium"
-                                                                                    id>100</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="border-bottom">
-                                                                    <div class="dropdown-item text-start product-item"
-                                                                        data-id="2">
-                                                                        <div
-                                                                            class="d-flex justify-content-between align-items-center">
-                                                                            <div>
-                                                                                <h1 class="mb-1 fs-14 fw-medium"> Mouse
-                                                                                    - Logitech MX</h1>
-                                                                                <span class=" fs-12 fw-medium">Rate:
-                                                                                    $200.00</span>
-                                                                            </div>
-                                                                            <div>
-                                                                                <h1 class="mb-1 fs-14 fw-medium">Stock
-                                                                                    On
-                                                                                    Hand</h1>
-                                                                                <span
-                                                                                    class=" fs-12 fw-medium">100</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="border-bottom">
-                                                                    <div class="dropdown-item text-start product-item"
-                                                                        data-id="3">
-                                                                        <div
-                                                                            class="d-flex justify-content-between align-items-center">
-                                                                            <div>
-                                                                                <h1 class="mb-1 fs-14 fw-medium">
-                                                                                    Keyboard - Keychron K2</h1>
-                                                                                <span class=" fs-12 fw-medium">Rate:
-                                                                                    $200.00</span>
-                                                                            </div>
-                                                                            <div>
-                                                                                <h1 class="mb-1 fs-14 fw-medium">Stock
-                                                                                    On
-                                                                                    Hand</h1>
-                                                                                <span
-                                                                                    class=" fs-12 fw-medium">100</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="border-bottom">
-                                                                    <div class="dropdown-item text-start product-item"
-                                                                        data-id="4">
-                                                                        <div
-                                                                            class="d-flex justify-content-between align-items-center">
-                                                                            <div>
-                                                                                <h1 class="mb-1 fs-14 fw-medium">Monitor
-                                                                                    - LG Ultrawide</h1>
-                                                                                <span class=" fs-12 fw-medium">Rate:
-                                                                                    $200.00</span>
-                                                                            </div>
-                                                                            <div>
-                                                                                <h1 class="mb-1 fs-14 fw-medium">Stock
-                                                                                    On
-                                                                                    Hand</h1>
-                                                                                <span
-                                                                                    class=" fs-12 fw-medium">100</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                            <div class="new-customer-view px-3 py-2 mt-2 border-top">
-                                                                <button type="button"
-                                                                    class="d-flex justify-content-start align-items-center gap-3 w-100">
-                                                                    <span class="icon"><i
-                                                                            class="fa-solid fa-circle-plus"></i></span>
-                                                                    <span class="content">Add New Items</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                    <tr>
+                                                        <td class="fs-5 fw-bolder" colspan="2"
+                                                            style="border-top: 1px solid gainsboro;">Total($)</td>
+                                                        <td class="fs-5 fw-bolder text-end"
+                                                            style="border-top: 1px solid gainsboro;">00</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
 
-                                            </td>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- ==================Items add area end=================== -->
 
-
-                                            <td>
-                                                <input type="text" class="form-control border-0 text-end" value="00.0">
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control border-0 text-end" value="00.0">
-                                            </td>
-                                            <td>
-                                                <div class="d-flex justify-content-between align-items-center gap-3">
-                                                    <input type="text" class="form-control border-0 text-end w-100"
-                                                        value="00.0">
-                                                    <select name="" id="" class="form-select border-0"
-                                                        style="width: 100px;">
-                                                        <option value="">%</option>
-                                                        <option value="">$</option>
-                                                    </select>
-                                                </div>
-                                            </td>
-                                            <td style="vertical-align: middle;" class="fs-6 text-end">
-                                                00
-                                            </td>
-                                            <td class="actionBtn fs-6" style="vertical-align: middle;">
-                                                <div class="d-flex justify-content-center align-items-center gap-3">
-                                                    <span>
-                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                                                    </span>
-                                                    <span>
-                                                        <i class="fa-solid fa-xmark"></i>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot style="border-color: #ffffff;">
-                                        <tr>
-                                            <td colspan="3">
-                                                <div class="d-flex w-100 h-100 justify-content-between align-items-start  flex-column"
-                                                    style="row-gap: 7rem;">
-                                                    <div
-                                                        class="d-flex w-100 justify-content-start align-items-center gap-3">
-                                                        <button type="button" class="btn"
-                                                            style="background: rgb(209, 209, 209);">
-                                                            <i class="fa-solid fa-circle-plus text-primary"></i>
-                                                            Add New Row
-                                                        </button>
-                                                        <button type="button" class="btn "
-                                                            style="background: rgb(209, 209, 209);">
-                                                            <i class="fa-solid fa-circle-plus text-primary"></i>
-                                                            Add Items In Bulk
-                                                        </button>
-                                                    </div>
-                                                    <div class="customer_note w-100">
-                                                        <label for="Customer Note">
-                                                            Customer Note
-                                                        </label> <br>
-                                                        <textarea class="form-control w-100 rounded-3" name="" rows="4"
-                                                            id=""></textarea>
-                                                        <label for="" class="fs-12">Will be displayed on the
-                                                            invoice</label>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td colspan="3">
-                                                <div class="p-4 bg-light mt-3 rounded-3">
-                                                    <table class=" w-100 border-0 bill_summeryTable">
-                                                        <tr>
-                                                            <td class="fs-6 fw-bold" colspan="2">Sub Total</td>
-                                                            <td class="fs-6 fw-bold text-end">00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Shipping Charges</td>
-                                                            <td>
-                                                                <div class="d-flex justify-content-center">
-                                                                    <input type="text" class="form-control"
-                                                                        style="width: 150px;">
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-end">
-                                                                00
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="d-flex justify-content-start">
-                                                                    <input type="text" value="Adjustment"
-                                                                        class="form-control" style="width: 150px;">
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex justify-content-center">
-                                                                    <input type="text" class="form-control"
-                                                                        style="width: 150px;">
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-end">
-                                                                00
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td class="fs-5 fw-bolder" colspan="2"
-                                                                style="border-top: 1px solid gainsboro;">Total($)</td>
-                                                            <td class="fs-5 fw-bolder text-end"
-                                                                style="border-top: 1px solid gainsboro;">00</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-
-                                            </td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
+                    <!-- terms and condition area -->
+                    <div class="terms_and_condition_file_updload py-4 px-3 border-bottom bg-light">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label for="" class="mb-1">Terms & Conditions</label>
+                                <textarea name="" id="" rows="4" class="form-control rounded-3"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="" class="mb-1">File Upload</label>
+                                <input type="file" class="form-select" style="width: 200px;">
+                                <label for="">
+                                    You can upload a maximum of 10 files, 10MB each
+                                </label>
                             </div>
                         </div>
-                        <!-- ==================Items add area end=================== -->
-
-                        <!-- terms and condition area -->
-                        <div class="terms_and_condition_file_updload py-4 px-3 border-bottom bg-light">
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <label for="" class="mb-1">Terms & Conditions</label>
-                                    <textarea name="" id="" rows="4" class="form-control rounded-3"></textarea>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="" class="mb-1">File Upload</label>
-                                    <input type="file" class="form-select" style="width: 200px;">
-                                    <label for="">
-                                        You can upload a maximum of 10 files, 10MB each
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="terms_and_condition_file_updload py-4 px-3 border-bottom bg-light">
-                            <h1 class="fs-14 fw-medium">Want to get paid faster? <span class="text-primary fs-5"
-                                    style="margin-top: -5px;"><i class="fa-brands fa-cc-mastercard me-2"></i><i
-                                        class="fa-brands fa-cc-visa"></i></span></h1>
-                            <p class="fs-12 fw-normal">
-                                Configure payment gateways and receive payments online. Set up Payment Gateway <a
-                                    href="#" class="fs-14 fw-bold text-primary text-decoration-none">Set up Payment
-                                    Gateway</a>
-                            </p>
-                        </div>
-                        <div class="note bg-white py-4 border-bottom bg-light px-3">
-                            <h1 class="fs-14 fw-medium"><span class="fw-bold">Additional Fields:</span> Start adding
-                                custom
-                                fields for your invoices by going to Settings <i class="fa-solid fa-arrow-right"></i>
-                                Sales
-                                <i class="fa-solid fa-arrow-right"></i> Invoices.</h1>
-
-                        </div>
-
-                    </form>
-                    <!-- total value showing area -->
-                    <div class="bg-white py-4 footer_area sticky-bottom border-top">
+                    </div>
+                    <div class="terms_and_condition_file_updload py-4 px-3 border-bottom bg-light">
+                        <h1 class="fs-14 fw-medium">Want to get paid faster? <span class="text-primary fs-5"
+                                style="margin-top: -5px;"><i class="fa-brands fa-cc-mastercard me-2"></i><i
+                                    class="fa-brands fa-cc-visa"></i></span></h1>
+                        <p class="fs-12 fw-normal">
+                            Configure payment gateways and receive payments online. Set up Payment Gateway <a href="#"
+                                class="fs-14 fw-bold text-primary text-decoration-none">Set up Payment
+                                Gateway</a>
+                        </p>
+                    </div>
+                    <div class="note bg-white py-4 border-bottom bg-light px-3">
+                        <h1 class="fs-14 fw-medium"><span class="fw-bold">Additional Fields:</span> Start adding
+                            custom
+                            fields for your invoices by going to Settings <i class="fa-solid fa-arrow-right"></i>
+                            Sales
+                            <i class="fa-solid fa-arrow-right"></i> Invoices.</h1>
 
                     </div>
+
+                </form>
+                <!-- total value showing area -->
+                <div class="bg-white py-4 footer_area sticky-bottom border-top">
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
